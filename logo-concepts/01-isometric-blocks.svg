@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 168" role="img" aria-labelledby="t d">
+  <title id="t">Konzept 1: CZ aus isometrischen Blöcken</title>
+  <desc id="d">Lockup mit Wortmarke CryptoZürich und powered by 0xnode.</desc>
+  <style>
+    @font-face {
+      font-family: Syne;
+      font-weight: 800;
+      src: url("../assets/fonts/syne-800.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: Outfit;
+      font-weight: 500;
+      src: url("../assets/fonts/outfit-500.woff2") format("woff2");
+    }
+    @font-face {
+      font-family: Outfit;
+      font-weight: 600;
+      src: url("../assets/fonts/outfit-600.woff2") format("woff2");
+    }
+  </style>
+  <image href="icons/01-isometric-blocks.svg" x="16" y="28" width="112" height="112"/>
+  <text x="148" y="86" font-family="Syne, sans-serif" font-weight="800" font-size="48" letter-spacing="-1.6">
+    <tspan fill="#f4f1ea">Crypto</tspan><tspan fill="#3de0b2">Zürich</tspan>
+  </text>
+  <text x="150" y="118" font-family="Outfit, sans-serif" font-weight="500" font-size="18" fill="#9aa6ba">powered by <tspan fill="#f4f1ea" font-weight="600">0xnode</tspan></text>
+</svg>

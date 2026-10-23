@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <title>CryptoZürich Logo-Konzepte</title>
+  <style>
+    @font-face { font-family: Syne; font-weight: 800; src: url("../assets/fonts/syne-800.woff2") format("woff2"); }
+    @font-face { font-family: Outfit; font-weight: 500; src: url("../assets/fonts/outfit-500.woff2") format("woff2"); }
+    @font-face { font-family: Outfit; font-weight: 600; src: url("../assets/fonts/outfit-600.woff2") format("woff2"); }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #07080d; color: #f4f1ea; }
+    body {
+      font-family: Outfit, sans-serif;
+      width: 1680px;
+      padding: 56px 56px 64px;
+    }
+    header { margin-bottom: 36px; }
+    .kicker {
+      margin: 0 0 8px;
+      color: #3de0b2;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+    }
+    header p.lead {
+      margin: 14px 0 0;
+      max-width: 760px;
+      color: #c5cddd;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 22px;
+    }
+    article {
+      background: #10141d;
+      border: 1px solid rgba(244, 241, 234, 0.1);
+      border-radius: 22px;
+      padding: 22px 22px 20px;
+    }
+    .num {
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #3de0b2;
+      letter-spacing: -0.04em;
+    }
+    h2 {
+      margin: 4px 0 6px;
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.04em;
+    }
+    article p { margin: 0; color: #9aa6ba; font-size: 16px; line-height: 1.35; min-height: 44px; }
+    .stage {
+      margin: 18px 0 8px;
+      background:
+        radial-gradient(120px 80px at 50% 42%, rgba(61, 224, 178, 0.08), transparent 70%),
+        #07080d;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      height: 280px;
+    }
+    .stage img { width: 220px; height: 220px; }
+    .lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(244, 241, 234, 0.1);
+    }
+    .lockup img { width: 64px; height: 64px; }
+    .name {
+      font-family: Syne, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: -0.045em;
+      line-height: 1;
+    }
+    .name span { color: #3de0b2; }
+    .pow { margin-top: 4px; color: #9aa6ba; font-size: 13px; }
+    .pow strong { color: #f4f1ea; font-weight: 600; }
+    .favs {
+      display: flex;
+      align-items: flex-end;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .fav { text-align: center; }
+    .fav b {
+      display: block;
+      margin-bottom: 6px;
+      color: #9aa6ba;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+    .swatch {
+      background: #07080d;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(244, 241, 234, 0.08);
+    }
+    .swatch.s32 { width: 48px; height: 48px; }
+    .swatch.s16 { width: 36px; height: 36px; }
+    .swatch img.i32 { width: 32px; height: 32px; }
+    .swatch img.i16 { width: 16px; height: 16px; }
+    .zoom {
+      width: 64px;
+      height: 64px;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      background: #07080d;
+      border-radius: 8px;
+      border: 1px solid rgba(244, 241, 234, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="kicker">CryptoZürich</p>
+    <h1>Drei Logo-Konzepte</h1>
+    <p class="lead">Jedes Zeichen enthält CZ, wirkt wie eine Blockchain und hat Tiefe. Die kleinen Kacheln sind die echten Favicon-Grössen.</p>
+  </header>
+  <div class="grid">
+    <article>
+      <div class="num">1</div>
+      <h2>Blöcke</h2>
+      <p>CZ aus wenigen isometrischen 3D-Blöcken. C hell, Z mint.</p>
+      <div class="stage"><img src="icons/01-isometric-blocks.svg" alt="Konzept 1, CZ aus 3D-Blöcken"></div>
+      <div class="lockup">
+        <img src="icons/01-isometric-blocks.svg" alt="">
+        <div>
+          <div class="name">Crypto<span>Zürich</span></div>
+          <div class="pow">powered by <strong>0xnode</strong></div>
+        </div>
+      </div>
+      <div class="favs">
+        <div class="fav"><b>32 px</b><div class="swatch s32"><img class="i32" src="icons/01-isometric-blocks.svg" alt=""></div></div>
+        <div class="fav"><b>16 px</b><div class="swatch s16"><img class="i16" src="icons/01-isometric-blocks.svg" alt=""></div></div>
+        <div class="fav"><b>16 px, 4×</b><img class="zoom" id="z1" alt="Konzept 1 vergrössert aus 16 px"></div>
+      </div>
+    </article>
+    <article>
+      <div class="num">2</div>
+      <h2>Würfel</h2>
+      <p>CZ auf der Front eines Blocks. Nodes laufen als Kette über die Kanten.</p>
+      <div class="stage"><img src="icons/02-cube-nodes.svg" alt="Konzept 2, CZ im Würfel mit Nodes"></div>
+      <div class="lockup">
+        <img src="icons/02-cube-nodes.svg" alt="">
+        <div>
+          <div class="name">Crypto<span>Zürich</span></div>
+          <div class="pow">powered by <strong>0xnode</strong></div>
+        </div>
+      </div>
+      <div class="favs">
+        <div class="fav"><b>32 px</b><div class="swatch s32"><img class="i32" src="icons/02-cube-nodes.svg" alt=""></div></div>
+        <div class="fav"><b>16 px</b><div class="swatch s16"><img class="i16" src="icons/02-cube-nodes.svg" alt=""></div></div>
+        <div class="fav"><b>16 px, 4×</b><img class="zoom" id="z2" alt="Konzept 2 vergrössert aus 16 px"></div>
+      </div>
+    </article>
+    <article>
+      <div class="num">3</div>
+      <h2>Kette</h2>
+      <p>C und Z als zwei 3D-Kettenglieder, die ineinander greifen.</p>
+      <div class="stage"><img src="icons/03-chain-links.svg" alt="Konzept 3, C und Z als Kettenglieder"></div>
+      <div class="lockup">
+        <img src="icons/03-chain-links.svg" alt="">
+        <div>
+          <div class="name">Crypto<span>Zürich</span></div>
+          <div class="pow">powered by <strong>0xnode</strong></div>
+        </div>
+      </div>
+      <div class="favs">
+        <div class="fav"><b>32 px</b><div class="swatch s32"><img class="i32" src="icons/03-chain-links.svg" alt=""></div></div>
+        <div class="fav"><b>16 px</b><div class="swatch s16"><img class="i16" src="icons/03-chain-links.svg" alt=""></div></div>
+        <div class="fav"><b>16 px, 4×</b><img class="zoom" id="z3" alt="Konzept 3 vergrössert aus 16 px"></div>
+      </div>
+    </article>
+  </div>
+  <script>
+    function zoom(img, out) {
+      const c = document.createElement("canvas");
+      c.width = 16; c.height = 16;
+      const ctx = c.getContext("2d");
+      ctx.drawImage(img, 0, 0, 16, 16);
+      out.src = c.toDataURL();
+    }
+    for (const [sel, id] of [[".i16", "z1"], [".i16", "z2"], [".i16", "z3"]]) {
+      /* filled below */
+    }
+    const imgs = document.querySelectorAll("img.i16");
+    const outs = [document.getElementById("z1"), document.getElementById("z2"), document.getElementById("z3")];
+    imgs.forEach((img, i) => {
+      const run = () => zoom(img, outs[i]);
+      if (img.complete) run();
+      else img.addEventListener("load", run);
+    });
+  </script>
+</body>
+</html>
