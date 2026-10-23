@@ -1,5 +1,5 @@
 /* CryptoZürich — einzige Stelle für den Web3Forms Access Key.
-   Beide Formulare (Kontakt und Newsletter) lesen den Key von hier.
+   Kontakt, Newsletter und Event-Anmeldung lesen den Key von hier.
    Web3Forms-Keys sind öffentlich und fürs Frontend gedacht:
    https://web3forms.com
    Im Dashboard die erlaubte Domain auf cryptozürich.ch beschränken.
