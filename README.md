@@ -43,7 +43,7 @@ Die Balken auf der Programmseite lesen eine Datei: `js/events-data.js`. Pro Aben
 
 `max` ist die Platzzahl und muss zur Zeile «Limitiert: max X Plätze» in `events.html` passen. Ist `registered` gleich `max` oder grösser, schaltet der Balken auf «Ausgebucht». Die Anmeldung bleibt als Warteliste offen, der Betreff bekommt den Zusatz «Warteliste». Nach dem Anmeldeschluss ist der Abend zu.
 
-Die Anmeldung ist das Formular auf `events.html`. Keine Zahlungsdaten und keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms.
+Die Anmeldung ist das Formular auf `events.html`. Keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms. Optional ist eine Zahlung in USDC oder ETH auf Ethereum Mainnet. Die Wallet steht nur in `js/config.js` (`EVENT_WALLET`). Die Seite setzt Adresse, Kopier-Button und Etherscan-Link von dort. Der QR-Code liegt als lokale Datei unter `assets/event-wallet-qr.svg`.
 
 ## Formulare (Web3Forms)
 

@@ -1136,6 +1136,67 @@ body.nav-open {
   margin-top: 0.35rem;
 }
 
+.crypto-pay {
+  margin-top: 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.15rem 0.95rem 0.35rem;
+  background: rgba(255, 255, 255, 0.03);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.crypto-qr {
+  display: block;
+  width: 168px;
+  max-width: 100%;
+  height: auto;
+  margin: 0.15rem 0 0.75rem;
+  padding: 8px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.crypto-pay .crypto-address {
+  margin: 0.15rem 0 0.35rem;
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  min-width: 0;
+}
+
+.crypto-warns {
+  margin: 0.85rem 0 0.45rem;
+  padding: 0.75rem 0.85rem 0.75rem 1.35rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 197, 109, 0.45);
+  background: rgba(255, 197, 109, 0.08);
+  color: var(--amber);
+}
+
+.crypto-warns li {
+  overflow-wrap: anywhere;
+}
+
+.pay-choice {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pay-choice legend {
+  padding: 0;
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
 .event-actions {
   display: flex;
   flex-wrap: wrap;

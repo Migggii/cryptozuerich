@@ -340,4 +340,29 @@
       });
     });
   });
+
+  var wallet = (window.CZ_CONFIG && window.CZ_CONFIG.EVENT_WALLET) || "";
+  if (/^0x[0-9a-fA-F]{40}$/.test(wallet)) {
+    document.querySelectorAll("[data-wallet-address]").forEach(function (node) {
+      node.textContent = wallet;
+    });
+    document.querySelectorAll("[data-wallet-link]").forEach(function (link) {
+      link.href = "https://etherscan.io/address/" + wallet;
+    });
+    document.querySelectorAll("[data-copy-wallet]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var box = button.closest(".crypto-pay");
+        var status = box ? box.querySelector("[data-wallet-status]") : null;
+        copyText(wallet).then(function () {
+          if (!status) return;
+          status.hidden = false;
+          status.textContent = "Adresse ist kopiert.";
+        }).catch(function () {
+          if (!status) return;
+          status.hidden = false;
+          status.textContent = "Kopieren hat nicht geklappt. Die Adresse steht über dem Button.";
+        });
+      });
+    });
+  }
 })();
