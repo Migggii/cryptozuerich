@@ -41,7 +41,7 @@ Die Balken auf der Programmseite lesen eine Datei: `js/events-data.js`. Pro Aben
 
 `registered` ist die Zahl der Personen, die schon dabei sind. Startwert ist 3: Gastgeber und zwei Partner-Helfer. Wenn jemand dazukommt, änderst du nur diese Zahl, speicherst die Datei und lädst die Seite neu. Beispiel: aus `registered: 3` wird `registered: 4`. Keine gerundeten oder erfundenen Zwischenwerte.
 
-`max` ist die Platzzahl und muss zur Zeile «Limitiert: max X Plätze» in `events.html` passen. Ist `registered` gleich `max` oder grösser, schaltet der Balken auf «Ausgebucht» und die Anmeldung für diesen Abend ist zu.
+`max` ist die Platzzahl und muss zur Zeile «Limitiert: max X Plätze» in `events.html` passen. Ist `registered` gleich `max` oder grösser, schaltet der Balken auf «Ausgebucht». Die Anmeldung bleibt als Warteliste offen, der Betreff bekommt den Zusatz «Warteliste». Nach dem Anmeldeschluss ist der Abend zu.
 
 Die Anmeldung ist das Formular auf `events.html`. Keine Zahlungsdaten und keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms.
 
