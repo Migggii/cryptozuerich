@@ -22,15 +22,16 @@ RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
 END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
-UID:dinner-decibels-2027@cryptozuerich
+UID:slice-seed-phrase-2027@cryptozuerich
 DTSTAMP:20261023T120000Z
 DTSTART;TZID=Europe/Zurich:20270910T190000
-DTEND;TZID=Europe/Zurich:20270911T010000
-SUMMARY:Dinner & Decibels — CryptoZürich
-DESCRIPTION:Gruppen-Dinner und anschliessend Techno in Zürich. Anmeldege
- bühr 35 CHF\, deckt die Reservation. Essen\, Getränke und Club zahlst d
- u selbst. Limitiert: max 25 Plätze. Keine Rückerstattung. Anmeldung auf
-  der Website. Keine Anlageberatung.
+DTEND;TZID=Europe/Zurich:20270910T223000
+SUMMARY:Slice & Seed Phrase — CryptoZürich
+DESCRIPTION:Intimer Italian-Abend an einem Tisch in Zürich. Keine Leinwand
+ . Anmeldegebühr 30 CHF\, deckt die Reservation. Essen und Getränke zahls
+ t du selbst. Limitiert: max 24 Plätze. Adresse ab 10.08.2027. Anmeldeschl
+ uss 27.08.2027. Keine Rückerstattung. Anmeldung auf der Website. Keine An
+ lageberatung.
 LOCATION:Zürich
 URL:https://xn--cryptozrich-zhb.ch/events.html
 END:VEVENT

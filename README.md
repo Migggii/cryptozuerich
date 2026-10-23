@@ -27,11 +27,21 @@ Dann [http://127.0.0.1:8080/](http://127.0.0.1:8080/). Die Pfade sind absolut (`
 | `datenschutz.html` | Datenschutzerklärung (nDSG), Vorlage mit Platzhaltern |
 | `404.html` | Seite nicht gefunden |
 
-Header, Navigation und Footer stehen in jeder HTML-Datei. Wenn du dort etwas änderst, pass alle Seiten an.
+Header, Navigation und Footer stehen in jeder HTML-Datei. Der Link «Zurück zu 0xnode.ch» steht im Header und im Footer jeder Seite, inklusive Impressum, Datenschutz und 404. Wenn du dort etwas änderst, pass alle Seiten an.
 
 ## Programm 2027
 
 Die vier Anlässe stehen in `events.html` (`#programm`) und als Teaser auf der Startseite (Hero-Ticket und `#als-naechstes`). Preise, Daten und «Limitiert: max X Plätze» nur an beiden Orten gleichzeitig ändern. Kalenderdateien liegen unter `events/*.ics`.
+
+Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben. Bis dahin steht «Zürich, Adresse folgt», dazu das Datum «Adresse ab …». Anmeldeschluss ist 2 Wochen vor Beginn. Der letzte Tag steht als Datum am Abend (`data-deadline`, Europe/Zurich, der Tag selbst zählt noch). Ab dem Folgetag setzt `js/events.js` den Button auf «Anmeldung geschlossen» und deaktiviert den Eintrag im Formular.
+
+## Teilnehmerstand
+
+Die Balken auf der Programmseite lesen eine Datei: `js/events-data.js`. Pro Abend gibt es `id`, `registered` und `max`.
+
+`registered` ist die Zahl der Personen, die schon dabei sind. Startwert ist 3: Gastgeber und zwei Partner-Helfer. Wenn jemand dazukommt, änderst du nur diese Zahl, speicherst die Datei und lädst die Seite neu. Beispiel: aus `registered: 3` wird `registered: 4`. Keine gerundeten oder erfundenen Zwischenwerte.
+
+`max` ist die Platzzahl und muss zur Zeile «Limitiert: max X Plätze» in `events.html` passen. Ist `registered` gleich `max` oder grösser, schaltet der Balken auf «Ausgebucht» und die Anmeldung für diesen Abend ist zu.
 
 Die Anmeldung ist das Formular auf `events.html`. Keine Zahlungsdaten und keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms.
 

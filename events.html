@@ -9,7 +9,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
   <title>Events 2027 — CryptoZürich</title>
-  <meta name="description" content="Vier exklusive Abende 2027: Smoke &amp; Satoshis, Pizza &amp; Proof-of-Stake, Dinner &amp; Decibels, Genesis Block Night. Plätze limitiert.">
+  <meta name="description" content="Vier exklusive Abende 2027: Smoke &amp; Satoshis, Pizza &amp; Proof-of-Stake, Slice &amp; Seed Phrase, Genesis Block Night. Plätze limitiert.">
   <link rel="canonical" href="https://xn--cryptozrich-zhb.ch/events.html">
   <link rel="icon" href="/assets/mark.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -45,6 +45,7 @@
         </a>
         <a class="powered-link" href="https://www.0xnode.ch" target="_blank" rel="noopener noreferrer">powered by <strong>0xnode</strong><span class="sr-only"> (öffnet in neuem Tab)</span></a>
       </div>
+      <a class="back-pill" href="https://www.0xnode.ch" target="_blank" rel="noopener noreferrer">← Zurück zu 0xnode.ch<span class="sr-only"> (öffnet in neuem Tab)</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
         <span class="sr-only">Menü öffnen</span>
@@ -92,10 +93,12 @@
           <p>Lies das, bevor du dich anmeldest. Es gilt für jeden Abend, ausser dort, wo «alles inklusive» ausdrücklich steht.</p>
           <ol class="rule-list">
             <li>Die Anmeldegebühr liegt je nach Location zwischen 20 und 50 CHF. Sie deckt die Raumreservation, nicht dein Glas.</li>
-            <li>Konsumation zahlst du selbst: Essen, Getränke, Zigarren, Club. Ausnahme nur, wenn der Anlass klar als «alles inklusive» markiert ist. Dann ist die Gebühr höher und deckt das ausgeschriebene Programm.</li>
+            <li>Konsumation zahlst du selbst: Essen, Getränke, Zigarren. Ausnahme nur, wenn der Anlass klar als «alles inklusive» markiert ist. Dann ist die Gebühr höher und deckt das ausgeschriebene Programm.</li>
             <li>Keine Rückerstattung. Mit der Gebühr planen wir Reservation und Platzzahl. Wenn du nicht kommen kannst, bleibt der Betrag bei uns.</li>
             <li>Plätze sind limitiert. Wer zuerst kommt, mahlt zuerst. Eine Anmeldung ist der Wunsch. Der Platz steht, wenn die Gebühr bei uns ist.</li>
             <li>Die Teilnehmerzahl hängt vom Ort ab. Bei jedem Anlass steht «Limitiert: max X Plätze». Mehr gibt der Raum nicht her.</li>
+            <li>Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben. Bis dahin steht beim Abend «Zürich, Adresse folgt».</li>
+            <li>Anmeldeschluss: 2 Wochen vor Beginn. Das Datum steht bei jedem Abend. Danach ist die Anmeldung geschlossen.</li>
             <li>Zahlungsinfos kommen nach der Anmeldung per Mail. Auf dieser Seite gibt es keine Online-Zahlung und keine Bankdaten.</li>
           </ol>
         </div>
@@ -107,7 +110,7 @@
         <div class="section-head">
           <p class="kicker">Die Abende</p>
           <h2>Einer pro Quartal.</h2>
-          <p>Adresse und Zahlungsinfos stehen in der Mail nach der Anmeldung. Hier ist das Programm.</p>
+          <p>Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben. Bis dahin: Zürich, Adresse folgt. Zahlungsinfos kommen nach der Anmeldung per Mail.</p>
         </div>
         <div class="quarter-tabs" role="tablist" aria-label="Quartal filtern">
           <button class="quarter-tab" type="button" role="tab" id="tab-alle" data-quarter-tab="alle" aria-selected="true" aria-controls="programm-liste">Alle</button>
@@ -118,18 +121,28 @@
         </div>
         <p class="filter-status" data-filter-status role="status"></p>
         <div class="programme-list" id="programm-liste" role="tabpanel" aria-labelledby="tab-alle">
-          <article class="event-card programme-card" id="smoke" data-quarter="q1" data-label="Smoke &amp; Satoshis" data-start="2027-03-13T18:00:00+01:00" data-end="2027-03-13T23:00:00+01:00">
+          <article class="event-card programme-card" id="smoke" data-event="smoke" data-quarter="q1" data-label="Smoke &amp; Satoshis" data-deadline="2027-02-27" data-start="2027-03-13T18:00:00+01:00" data-end="2027-03-13T23:00:00+01:00">
             <div class="event-card-top">
               <p class="tag">Q1 · Lounge</p>
               <p class="stamp is-set">Sa 13.03.2027</p>
             </div>
             <h3>Smoke &amp; Satoshis</h3>
-            <p>Zigarren-Lounge für zwanzig Leute. Whisky und Zigarren zahlst du an der Bar. Die Gebühr hält den Raum, damit die Runde klein bleibt.</p>
+            <p>Zigarren-Lounge für zwanzig Leute, ab 18. Whisky und Zigarren zahlst du an der Bar. Rauch gehört dazu. Wer nicht raucht, ist willkommen und sollte das vorher wissen. Die Gebühr hält den Raum, damit die Runde klein bleibt.</p>
             <p class="price">50 CHF <span>Anmeldegebühr, Raum</span></p>
             <p class="limit">Limitiert: max 20 Plätze</p>
+            <div class="capacity" data-capacity="smoke">
+              <div class="capacity-track" id="capacity-smoke" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="3" aria-valuetext="3 von 20 Anmeldungen" aria-labelledby="capacity-label-smoke">
+                <span class="capacity-fill" style="width:15%"></span>
+              </div>
+              <p class="capacity-label" id="capacity-label-smoke">3/20 Anmeldungen</p>
+              <p class="capacity-state" hidden>Ausgebucht</p>
+            </div>
+            <p class="address-note">Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben.</p>
             <dl class="meta">
               <div><dt>Wann</dt><dd><time datetime="2027-03-13T18:00:00+01:00">Samstag, 13. März 2027, 18:00–23:00</time></dd></div>
-              <div><dt>Wo</dt><dd>Zürich, Adresse mit der Zahlungsmail</dd></div>
+              <div><dt>Wo</dt><dd>Zürich, Adresse folgt</dd></div>
+              <div><dt>Adresse</dt><dd>ab <time datetime="2027-02-13">13.02.2027</time></dd></div>
+              <div><dt>Anmeldeschluss</dt><dd>2 Wochen vor Beginn, <time datetime="2027-02-27">27.02.2027</time></dd></div>
               <div><dt>Konsumation</dt><dd>selbst bezahlt</dd></div>
             </dl>
             <details class="fold">
@@ -137,38 +150,44 @@
               <ol>
                 <li>18:00 Türen. Ankommen, ankommen lassen.</li>
                 <li>18:30 «Mein erster Coin». Zwei Minuten, wie es bei dir anfing. Zuhören zählt auch.</li>
-                <li>19:15 Wallet-Bingo. Felder wie «Hardware-Wallet dabei», «Seed-Phrase schon verlegt», «2017 dabei gewesen». Eine Reihe heisst: du erzählst die Geschichte. Es gibt nichts zu gewinnen.</li>
+                <li>19:15 Kennenlern-Runde «Die verschlüsselte Zigarrenbox». Mehr verraten wir nicht.</li>
                 <li>Danach offene Lounge bis 23:00.</li>
               </ol>
             </details>
-            <details class="fold">
-              <summary>Dresscode</summary>
-              <p>Dunkel und gepflegt. Sneakers sind in Ordnung, Sportkleidung nicht. Der Abend ist ab 18. Rauch gehört dazu. Wer nicht raucht, ist willkommen und sollte das vorher wissen.</p>
-            </details>
-            <details class="fold">
+            <details class="fold" open>
               <summary>Kennenlernen</summary>
-              <p>«Mein erster Coin» und Wallet-Bingo. Kein Pitch, kein Portfolio. Nur Geschichten, an denen man sich erkennt.</p>
+              <p>Die verschlüsselte Zigarrenbox. Bring Neugier mit. Jeder Gast bekommt ein Fragment … mehr verraten wir nicht.</p>
             </details>
             <div class="event-actions">
-              <a class="btn btn-primary" href="#anmeldung" data-pick="Smoke &amp; Satoshis · 13.03.2027">Anmelden</a>
+              <a class="btn btn-primary" href="#anmeldung" data-signup data-pick="Smoke &amp; Satoshis · 13.03.2027">Anmelden</a>
               <a class="btn btn-ghost" href="/events/2027-q1-smoke-satoshis.ics" download>In den Kalender (.ics)</a>
               <button class="btn btn-ghost" type="button" data-share="Ich gehe am Samstag, 13. März 2027 zu «Smoke &amp; Satoshis» von CryptoZürich. Du bist eingeladen und darfst wieder jemanden mitbringen." data-share-url="https://xn--cryptozrich-zhb.ch/events.html#smoke">Freund einladen</button>
             </div>
             <p class="share-status" data-share-status role="status" hidden></p>
           </article>
 
-          <article class="event-card programme-card" id="pizza" data-quarter="q2" data-label="Pizza &amp; Proof-of-Stake" data-start="2027-06-11T18:30:00+02:00" data-end="2027-06-11T22:30:00+02:00">
+          <article class="event-card programme-card" id="pizza" data-event="pizza" data-quarter="q2" data-label="Pizza &amp; Proof-of-Stake" data-deadline="2027-05-28" data-start="2027-06-11T18:30:00+02:00" data-end="2027-06-11T22:30:00+02:00">
             <div class="event-card-top">
               <p class="tag">Q2 · Pizza</p>
               <p class="stamp is-set">Fr 11.06.2027</p>
             </div>
             <h3>Pizza &amp; Proof-of-Stake</h3>
-            <p>Freitag, ein Tisch, ein Live-Webinar auf der Leinwand. Die Gebühr deckt den Raum. Pizza und Getränke zahlst du selbst.</p>
+            <p>Freitag, ein grösserer Raum, Pizza und ein Live-Webinar auf der Leinwand. Das ist nicht der intime Tisch im September: hier ist der Stream der Mittelpunkt. Die Gebühr deckt den Raum. Pizza und Getränke zahlst du selbst.</p>
             <p class="price">20 CHF <span>Anmeldegebühr, Raum</span></p>
             <p class="limit">Limitiert: max 30 Plätze</p>
+            <div class="capacity" data-capacity="pizza">
+              <div class="capacity-track" id="capacity-pizza" role="progressbar" aria-valuemin="0" aria-valuemax="30" aria-valuenow="3" aria-valuetext="3 von 30 Anmeldungen" aria-labelledby="capacity-label-pizza">
+                <span class="capacity-fill" style="width:10%"></span>
+              </div>
+              <p class="capacity-label" id="capacity-label-pizza">3/30 Anmeldungen</p>
+              <p class="capacity-state" hidden>Ausgebucht</p>
+            </div>
+            <p class="address-note">Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben.</p>
             <dl class="meta">
               <div><dt>Wann</dt><dd><time datetime="2027-06-11T18:30:00+02:00">Freitag, 11. Juni 2027, 18:30–22:30</time></dd></div>
-              <div><dt>Wo</dt><dd>Zürich, Adresse mit der Zahlungsmail</dd></div>
+              <div><dt>Wo</dt><dd>Zürich, Adresse folgt</dd></div>
+              <div><dt>Adresse</dt><dd>ab <time datetime="2027-05-11">11.05.2027</time></dd></div>
+              <div><dt>Anmeldeschluss</dt><dd>2 Wochen vor Beginn, <time datetime="2027-05-28">28.05.2027</time></dd></div>
               <div><dt>Konsumation</dt><dd>selbst bezahlt</dd></div>
             </dl>
             <details class="fold">
@@ -181,61 +200,63 @@
               </ol>
             </details>
             <details class="fold">
-              <summary>Dresscode</summary>
-              <p>Locker. Komm so, wie du am Freitag aus dem Tag kommst. Eine Serviette reicht als Upgrade.</p>
-            </details>
-            <details class="fold">
               <summary>Kennenlernen</summary>
               <p>Das Quiz mischt die Tische. Du landest neben jemandem, weil ihr dieselbe falsche Antwort hattet. Das reicht als Einstieg.</p>
             </details>
             <div class="event-actions">
-              <a class="btn btn-primary" href="#anmeldung" data-pick="Pizza &amp; Proof-of-Stake · 11.06.2027">Anmelden</a>
+              <a class="btn btn-primary" href="#anmeldung" data-signup data-pick="Pizza &amp; Proof-of-Stake · 11.06.2027">Anmelden</a>
               <a class="btn btn-ghost" href="/events/2027-q2-pizza-pos.ics" download>In den Kalender (.ics)</a>
               <button class="btn btn-ghost" type="button" data-share="Ich gehe am Freitag, 11. Juni 2027 zu «Pizza &amp; Proof-of-Stake» von CryptoZürich. Du bist eingeladen und darfst wieder jemanden mitbringen." data-share-url="https://xn--cryptozrich-zhb.ch/events.html#pizza">Freund einladen</button>
             </div>
             <p class="share-status" data-share-status role="status" hidden></p>
           </article>
 
-          <article class="event-card programme-card" id="dinner" data-quarter="q3" data-label="Dinner &amp; Decibels" data-start="2027-09-10T19:00:00+02:00" data-end="2027-09-11T01:00:00+02:00">
+          <article class="event-card programme-card" id="slice" data-event="slice" data-quarter="q3" data-label="Slice &amp; Seed Phrase" data-deadline="2027-08-27" data-start="2027-09-10T19:00:00+02:00" data-end="2027-09-10T22:30:00+02:00">
             <div class="event-card-top">
-              <p class="tag">Q3 · Dinner + Techno</p>
+              <p class="tag">Q3 · Italian</p>
               <p class="stamp is-set">Fr 10.09.2027</p>
             </div>
-            <h3>Dinner &amp; Decibels</h3>
-            <p>Zuerst ein gemeinsamer Tisch, danach eine Techno-Nacht für alle, die weiterwollen. Die Gebühr reserviert die Gruppe. Essen, Getränke und der Club gehen separat.</p>
-            <p class="price">35 CHF <span>Anmeldegebühr, Reservation</span></p>
-            <p class="limit">Limitiert: max 25 Plätze</p>
+            <h3>Slice &amp; Seed Phrase</h3>
+            <p>Ein intimer Italian-Abend für 24 Leute an einem Tisch. Pizza und weitere Gänge, kein Techno und keine Leinwand. Nicht zu verwechseln mit Pizza &amp; Proof-of-Stake im Juni: dort läuft ein Webinar, hier ist das Gespräch der Mittelpunkt. Die Gebühr hält den Tisch. Essen und Getränke zahlst du selbst.</p>
+            <p class="price">30 CHF <span>Anmeldegebühr, Tisch</span></p>
+            <p class="limit">Limitiert: max 24 Plätze</p>
+            <div class="capacity" data-capacity="slice">
+              <div class="capacity-track" id="capacity-slice" role="progressbar" aria-valuemin="0" aria-valuemax="24" aria-valuenow="3" aria-valuetext="3 von 24 Anmeldungen" aria-labelledby="capacity-label-slice">
+                <span class="capacity-fill" style="width:12.5%"></span>
+              </div>
+              <p class="capacity-label" id="capacity-label-slice">3/24 Anmeldungen</p>
+              <p class="capacity-state" hidden>Ausgebucht</p>
+            </div>
+            <p class="address-note">Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben.</p>
             <dl class="meta">
-              <div><dt>Wann</dt><dd><time datetime="2027-09-10T19:00:00+02:00">Freitag, 10. September 2027, ab 19:00</time></dd></div>
-              <div><dt>Wo</dt><dd>Zürich, Adresse mit der Zahlungsmail</dd></div>
+              <div><dt>Wann</dt><dd><time datetime="2027-09-10T19:00:00+02:00">Freitag, 10. September 2027, 19:00–22:30</time></dd></div>
+              <div><dt>Wo</dt><dd>Zürich, Adresse folgt</dd></div>
+              <div><dt>Adresse</dt><dd>ab <time datetime="2027-08-10">10.08.2027</time></dd></div>
+              <div><dt>Anmeldeschluss</dt><dd>2 Wochen vor Beginn, <time datetime="2027-08-27">27.08.2027</time></dd></div>
               <div><dt>Konsumation</dt><dd>selbst bezahlt</dd></div>
             </dl>
             <details class="fold">
               <summary>Ablauf</summary>
               <ol>
-                <li>19:00 Dinner. Der Tisch ist der Treffpunkt.</li>
-                <li>Zwischen den Gängen Speed-Networking: eine Krypto-Fragekarte, drei Minuten, nächste Person.</li>
-                <li>21:30 Aufbruch für alle, die in die Nacht wollen. Wer nach Hause geht, hat den Abend trotzdem gehabt.</li>
-                <li>Ab etwa 22:00 Techno. Der Club ist ab 18, wie das Haus es verlangt.</li>
+                <li>19:00 Ankommen. Ein Tisch, keine Leinwand, kein Stream.</li>
+                <li>19:30 Italian, Gang für Gang. Pizza gehört dazu. Bestellt wird gemeinsam, bezahlt wird selbst.</li>
+                <li>Zwischen den Gängen das Kennenlern-Spiel. Den Namen siehst du unten. Die Regeln bleiben bis zum Abend geheim.</li>
+                <li>22:30 Schluss. Der Abend bleibt am Tisch.</li>
               </ol>
             </details>
-            <details class="fold">
-              <summary>Dresscode</summary>
-              <p>Etwas, das vom Stuhl auf die Tanzfläche kann. Ein zweites Oberteil im Rucksack ist klug. Kein Anzugzwang.</p>
-            </details>
-            <details class="fold">
+            <details class="fold" open>
               <summary>Kennenlernen</summary>
-              <p>Fragekarten statt Smalltalk über den Wetterbericht. Drei Minuten, dann wird gewechselt. Die Karte stellt die Frage, nicht du.</p>
+              <p>Wer ist der Wal? Nicht jede Geschichte am Tisch ist wahr …</p>
             </details>
             <div class="event-actions">
-              <a class="btn btn-primary" href="#anmeldung" data-pick="Dinner &amp; Decibels · 10.09.2027">Anmelden</a>
-              <a class="btn btn-ghost" href="/events/2027-q3-dinner-decibels.ics" download>In den Kalender (.ics)</a>
-              <button class="btn btn-ghost" type="button" data-share="Ich gehe am Freitag, 10. September 2027 zu «Dinner &amp; Decibels» von CryptoZürich. Du bist eingeladen und darfst wieder jemanden mitbringen." data-share-url="https://xn--cryptozrich-zhb.ch/events.html#dinner">Freund einladen</button>
+              <a class="btn btn-primary" href="#anmeldung" data-signup data-pick="Slice &amp; Seed Phrase · 10.09.2027">Anmelden</a>
+              <a class="btn btn-ghost" href="/events/2027-q3-slice-seed-phrase.ics" download>In den Kalender (.ics)</a>
+              <button class="btn btn-ghost" type="button" data-share="Ich gehe am Freitag, 10. September 2027 zu «Slice &amp; Seed Phrase» von CryptoZürich. Du bist eingeladen und darfst wieder jemanden mitbringen." data-share-url="https://xn--cryptozrich-zhb.ch/events.html#slice">Freund einladen</button>
             </div>
             <p class="share-status" data-share-status role="status" hidden></p>
           </article>
 
-          <article class="event-card programme-card" id="genesis" data-quarter="q4" data-label="Genesis Block Night" data-start="2027-12-04T18:00:00+01:00" data-end="2027-12-04T23:30:00+01:00">
+          <article class="event-card programme-card" id="genesis" data-event="genesis" data-quarter="q4" data-label="Genesis Block Night" data-deadline="2027-11-20" data-start="2027-12-04T18:00:00+01:00" data-end="2027-12-04T23:30:00+01:00">
             <div class="event-card-top">
               <p class="tag">Q4 · Jahresabschluss</p>
               <p class="stamp is-allin">Alles inklusive</p>
@@ -245,9 +266,19 @@
             <p class="price price-allin">120 CHF <span>alles inklusive</span></p>
             <p class="allin-note">«Alles inklusive» gilt nur hier und nur für das ausgeschriebene Programm bis 23:30. Keine offene Bar bis zum Morgen.</p>
             <p class="limit">Limitiert: max 40 Plätze</p>
+            <div class="capacity" data-capacity="genesis">
+              <div class="capacity-track" id="capacity-genesis" role="progressbar" aria-valuemin="0" aria-valuemax="40" aria-valuenow="3" aria-valuetext="3 von 40 Anmeldungen" aria-labelledby="capacity-label-genesis">
+                <span class="capacity-fill" style="width:7.5%"></span>
+              </div>
+              <p class="capacity-label" id="capacity-label-genesis">3/40 Anmeldungen</p>
+              <p class="capacity-state" hidden>Ausgebucht</p>
+            </div>
+            <p class="address-note">Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben.</p>
             <dl class="meta">
               <div><dt>Wann</dt><dd><time datetime="2027-12-04T18:00:00+01:00">Samstag, 4. Dezember 2027, 18:00–23:30</time></dd></div>
-              <div><dt>Wo</dt><dd>Zürich, Adresse mit der Zahlungsmail</dd></div>
+              <div><dt>Wo</dt><dd>Zürich, Adresse folgt</dd></div>
+              <div><dt>Adresse</dt><dd>ab <time datetime="2027-11-04">04.11.2027</time></dd></div>
+              <div><dt>Anmeldeschluss</dt><dd>2 Wochen vor Beginn, <time datetime="2027-11-20">20.11.2027</time></dd></div>
               <div><dt>Konsumation</dt><dd>im Preis, bis 23:30</dd></div>
             </dl>
             <details class="fold">
@@ -260,15 +291,11 @@
               </ol>
             </details>
             <details class="fold">
-              <summary>Dresscode</summary>
-              <p>Festlich. Ein bisschen Glanz ist erwünscht, eine Krawatte nicht Pflicht. Komm so, dass du dich auf ein Foto Ende Jahr freust.</p>
-            </details>
-            <details class="fold">
               <summary>Kennenlernen</summary>
               <p>Bingo zum Start, Geschichten zum Essen, Quiz zum Schluss. Drei Formate, ein Abend, niemand muss die ganze Zeit reden.</p>
             </details>
             <div class="event-actions">
-              <a class="btn btn-primary" href="#anmeldung" data-pick="Genesis Block Night · 04.12.2027 · alles inklusive">Anmelden</a>
+              <a class="btn btn-primary" href="#anmeldung" data-signup data-pick="Genesis Block Night · 04.12.2027 · alles inklusive">Anmelden</a>
               <a class="btn btn-ghost" href="/events/2027-q4-genesis-block.ics" download>In den Kalender (.ics)</a>
               <button class="btn btn-ghost" type="button" data-share="Ich gehe am Samstag, 4. Dezember 2027 zur «Genesis Block Night» von CryptoZürich, alles inklusive. Du bist eingeladen und darfst wieder jemanden mitbringen." data-share-url="https://xn--cryptozrich-zhb.ch/events.html#genesis">Freund einladen</button>
             </div>
@@ -323,10 +350,10 @@
               <span>Event</span>
               <select name="anlass" required>
                 <option value="">Bitte wählen</option>
-                <option>Smoke &amp; Satoshis · 13.03.2027</option>
-                <option>Pizza &amp; Proof-of-Stake · 11.06.2027</option>
-                <option>Dinner &amp; Decibels · 10.09.2027</option>
-                <option>Genesis Block Night · 04.12.2027 · alles inklusive</option>
+                <option value="Smoke &amp; Satoshis · 13.03.2027" data-event="smoke" data-label="Smoke &amp; Satoshis · 13.03.2027">Smoke &amp; Satoshis · 13.03.2027</option>
+                <option value="Pizza &amp; Proof-of-Stake · 11.06.2027" data-event="pizza" data-label="Pizza &amp; Proof-of-Stake · 11.06.2027">Pizza &amp; Proof-of-Stake · 11.06.2027</option>
+                <option value="Slice &amp; Seed Phrase · 10.09.2027" data-event="slice" data-label="Slice &amp; Seed Phrase · 10.09.2027">Slice &amp; Seed Phrase · 10.09.2027</option>
+                <option value="Genesis Block Night · 04.12.2027 · alles inklusive" data-event="genesis" data-label="Genesis Block Night · 04.12.2027 · alles inklusive">Genesis Block Night · 04.12.2027 · alles inklusive</option>
               </select>
             </label>
             <label class="field">
@@ -396,11 +423,13 @@
       </div>
     </div>
     <div class="container footer-bottom">
+      <a class="back-pill" href="https://www.0xnode.ch" target="_blank" rel="noopener noreferrer">← Zurück zu 0xnode.ch<span class="sr-only"> (öffnet in neuem Tab)</span></a>
       <p>© <span data-year>2026</span> CryptoZürich</p>
       <p>Keine Tracker. Keine Anlageberatung.</p>
     </div>
   </footer>
   <script src="/js/config.js"></script>
+  <script src="/js/events-data.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/events.js"></script>
   <script src="/js/forms.js"></script>
