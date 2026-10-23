@@ -1459,6 +1459,12 @@ body.nav-open {
   align-items: start;
 }
 
+.signup-copy > h3 {
+  margin: 1.15rem 0 0.55rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 45, 149, 0.32);
+}
+
 .form-shell {
   background: rgba(16, 20, 30, 0.92);
   border: 1px solid var(--line);
@@ -1662,6 +1668,11 @@ select:user-invalid {
   .card-grid.formats,
   .card-grid.events {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .signup-copy > h3 {
+    margin-top: 1.7rem;
+    padding-top: 1.1rem;
   }
 
   .steps {
