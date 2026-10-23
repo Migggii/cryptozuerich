@@ -27,11 +27,10 @@ DTSTAMP:20261023T120000Z
 DTSTART;TZID=Europe/Zurich:20270910T190000
 DTEND;TZID=Europe/Zurich:20270910T223000
 SUMMARY:Slice & Seed Phrase — CryptoZürich
-DESCRIPTION:Intimer Italian-Abend an einem Tisch in Zürich. Keine Leinwand
- . Anmeldegebühr 30 CHF\, deckt die Reservation. Essen und Getränke zahls
- t du selbst. Limitiert: max 24 Plätze. Adresse ab 10.08.2027. Anmeldeschl
- uss 27.08.2027. Keine Rückerstattung. Anmeldung auf der Website. Keine An
- lageberatung.
+DESCRIPTION:Intimer Italian-Abend an einem Tisch in Zürich. Anmeldegebühr
+  30 CHF\, deckt die Reservation. Essen und Getränke zahlst du selbst. Lim
+ itiert: max 24 Plätze. Adresse ab 10.08.2027. Anmeldeschluss 27.08.2027. 
+ Keine Rückerstattung. Anmeldung auf der Website. Keine Anlageberatung.
 LOCATION:Zürich
 URL:https://xn--cryptozrich-zhb.ch/events.html
 END:VEVENT
