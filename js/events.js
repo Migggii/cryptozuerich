@@ -142,10 +142,95 @@
     });
   }
 
+  function zurichDay(date) {
+    return new Intl.DateTimeFormat("en-CA", {
+      timeZone: "Europe/Zurich",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).format(date);
+  }
+
+  function applyEvents() {
+    var today = zurichDay(new Date());
+    (window.CZ_EVENTS || []).forEach(function (event) {
+      var card = document.querySelector('[data-event="' + event.id + '"]');
+      if (!card) return;
+      var registered = Number(event.registered);
+      var max = Number(event.max);
+      var full = max > 0 && registered >= max;
+      var deadline = card.getAttribute("data-deadline");
+      var closed = Boolean(deadline) && today > deadline;
+      var box = card.querySelector("[data-capacity]");
+      if (box) {
+        var track = box.querySelector("[role='progressbar']");
+        var fill = box.querySelector(".capacity-fill");
+        var label = box.querySelector(".capacity-label");
+        var state = box.querySelector(".capacity-state");
+        var ratio = max > 0 ? registered / max : 0;
+        if (ratio < 0) ratio = 0;
+        if (ratio > 1) ratio = 1;
+        if (track) {
+          track.setAttribute("aria-valuemax", String(max));
+          track.setAttribute("aria-valuenow", String(registered));
+          track.setAttribute("aria-valuetext", registered + " von " + max + " Anmeldungen" + (full ? ", ausgebucht" : ""));
+        }
+        if (fill) fill.style.width = (ratio * 100) + "%";
+        if (label) label.textContent = registered + "/" + max + " Anmeldungen";
+        box.classList.toggle("is-full", full);
+        if (state) state.hidden = !full;
+      }
+      var signup = card.querySelector("[data-signup]");
+      if (signup && (closed || full)) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "btn btn-primary is-closed";
+        button.disabled = true;
+        button.textContent = closed ? "Anmeldung geschlossen" : "Ausgebucht";
+        signup.replaceWith(button);
+      }
+      if (!anlass) return;
+      Array.prototype.forEach.call(anlass.options, function (option) {
+        if (option.getAttribute("data-event") !== event.id || (!closed && !full)) return;
+        var note = closed ? " (Anmeldung geschlossen)" : " (ausgebucht)";
+        if (option.getAttribute("data-note") !== note) {
+          var base = option.getAttribute("data-label") || option.textContent;
+          option.textContent = base + note;
+          option.setAttribute("data-note", note);
+        }
+        option.disabled = true;
+        option.setAttribute("disabled", "");
+        if (anlass.value === option.value) anlass.value = "";
+      });
+    });
+  }
+
+  applyEvents();
+
+  if (form && anlass) {
+    form.addEventListener("submit", function (event) {
+      var chosen = anlass.options[anlass.selectedIndex];
+      if (!chosen || !chosen.disabled) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      var full = chosen.textContent.indexOf("ausgebucht") !== -1;
+      anlass.setCustomValidity(full ? "Dieser Abend ist ausgebucht." : "Für diesen Abend ist die Anmeldung geschlossen.");
+      anlass.reportValidity();
+    }, true);
+    anlass.addEventListener("change", function () {
+      anlass.setCustomValidity("");
+    });
+  }
+
   document.querySelectorAll("[data-pick]").forEach(function (link) {
     link.addEventListener("click", function () {
       if (!anlass) return;
-      anlass.value = link.getAttribute("data-pick");
+      var value = link.getAttribute("data-pick");
+      var match = Array.prototype.filter.call(anlass.options, function (option) {
+        return option.value === value;
+      })[0];
+      if (!match || match.disabled) return;
+      anlass.value = value;
     });
   });
 
