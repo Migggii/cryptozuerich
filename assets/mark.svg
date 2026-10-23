@@ -1,20 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t d">
+  <title id="t">CryptoZürich</title>
+  <desc id="d">Logo von CryptoZürich: CZ auf der Front eines 3D-Blocks, mit einer Kette aus Nodes.</desc>
   <defs>
-    <linearGradient id="cz-bg" x1="6" y1="2" x2="58" y2="64" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1a2233"/>
-      <stop offset="1" stop-color="#090c14"/>
-    </linearGradient>
-    <linearGradient id="cz-z" x1="12" y1="18" x2="52" y2="50" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#b8ffe8"/>
-      <stop offset="0.45" stop-color="#3de0b2"/>
-      <stop offset="1" stop-color="#1fbfa0"/>
-    </linearGradient>
+<linearGradient id="ct" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#c4cbff"/><stop offset="1" stop-color="#6d78d4"/></linearGradient>
+<linearGradient id="cs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c3550"/><stop offset="1" stop-color="#161b2c"/></linearGradient>
+<linearGradient id="cf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#243044"/><stop offset="1" stop-color="#10151f"/></linearGradient>
+<linearGradient id="c2f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#e4dfd4"/></linearGradient>
+<linearGradient id="z2f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c8ffee"/><stop offset="1" stop-color="#2ed3a6"/></linearGradient>
   </defs>
-  <rect width="64" height="64" rx="15" fill="url(#cz-bg)"/>
-  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="14" stroke="#3de0b2" stroke-opacity="0.45"/>
-  <path fill="#f4f1ea" d="M15 24h8v24h-8zM41 24h8v24h-8z"/>
-  <path fill="#9aa6ff" d="M17.2 15h3.6v9h-3.6zM43.2 15h3.6v9h-3.6z"/>
-  <path d="M13 25.5h38M15 45.5h38M48.5 25.5 15.5 45.5" stroke="url(#cz-z)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="35.5" r="5.4" fill="#090c14" stroke="#9aa6ff" stroke-width="2"/>
-  <circle cx="32" cy="35.5" r="2.15" fill="#3de0b2"/>
+<rect x="1.25" y="1.25" width="61.5" height="61.5" rx="14" fill="#10141d"/><rect x="1.75" y="1.75" width="60.5" height="60.5" rx="13.5" fill="none" stroke="#3de0b2" stroke-opacity="0.28" stroke-width="1"/>
+<polygon points="45.80,18.20 57.00,8.80 57.00,47.40 45.80,56.80" fill="url(#cs)" stroke="#07080d" stroke-width="0.5" stroke-linejoin="round"/><polygon points="7.20,18.20 18.40,8.80 57.00,8.80 45.80,18.20" fill="url(#ct)" stroke="#07080d" stroke-width="0.5" stroke-linejoin="round"/><polygon points="7.20,18.20 45.80,18.20 45.80,56.80 7.20,56.80" fill="url(#cf)" stroke="#07080d" stroke-width="0.5" stroke-linejoin="round"/>
+<g stroke="#07080d" stroke-opacity="0.28" stroke-width="0.7"><path d="M17 12.4 L50 12.4"/><path d="M14 15.4 L48 15.4"/></g>
+<polygon points="10.40,43.20 24.60,43.20 26.05,42.05 11.85,42.05" fill="#fffdf8" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="24.60,43.20 24.60,51.20 26.05,50.05 26.05,42.05" fill="#a39c90" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="10.40,43.20 24.60,43.20 24.60,51.20 10.40,51.20" fill="url(#c2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="10.40,23.20 18.40,23.20 19.85,22.05 11.85,22.05" fill="#fffdf8" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="18.40,23.20 18.40,51.20 19.85,50.05 19.85,22.05" fill="#a39c90" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="10.40,23.20 18.40,23.20 18.40,51.20 10.40,51.20" fill="url(#c2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="10.40,23.20 24.60,23.20 26.05,22.05 11.85,22.05" fill="#fffdf8" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="24.60,23.20 24.60,31.20 26.05,30.05 26.05,22.05" fill="#a39c90" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="10.40,23.20 24.60,23.20 24.60,31.20 10.40,31.20" fill="url(#c2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="34.68,47.10 42.88,31.30 44.33,30.15 36.13,45.95" fill="#0c6e56" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="42.88,31.30 36.32,27.90 37.77,26.75 44.33,30.15" fill="#f3fffb" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="36.32,27.90 28.12,43.70 34.68,47.10 42.88,31.30" fill="url(#z2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="28.80,43.60 43.20,43.60 44.65,42.45 30.25,42.45" fill="#f3fffb" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="43.20,43.60 43.20,51.20 44.65,50.05 44.65,42.45" fill="#0c6e56" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="28.80,43.60 43.20,43.60 43.20,51.20 28.80,51.20" fill="url(#z2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="28.80,23.40 43.20,23.40 44.65,22.25 30.25,22.25" fill="#f3fffb" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="43.20,23.40 43.20,31.00 44.65,29.85 44.65,22.25" fill="#0c6e56" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<polygon points="28.80,23.40 43.20,23.40 43.20,31.00 28.80,31.00" fill="url(#z2f)" stroke="#07080d" stroke-width="0.45" stroke-linejoin="round"/>
+<path d="M 22.5 10.2 L 38.0 8.8 L 53.2 12.4 L 56.4 29.0 L 52.6 45.8" fill="none" stroke="#148f72" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M 22.5 10.2 L 38.0 8.8 L 53.2 12.4 L 56.4 29.0 L 52.6 45.8" fill="none" stroke="#3de0b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g><circle cx="22.5" cy="10.2" r="3.15" fill="#0e3d32"/><circle cx="22.5" cy="10.2" r="3.15" fill="none" stroke="#8dffd8" stroke-width="1.35"/><circle cx="22.5" cy="10.2" r="1.15" fill="#eafff8"/><circle cx="38.0" cy="8.8" r="3.15" fill="#0e3d32"/><circle cx="38.0" cy="8.8" r="3.15" fill="none" stroke="#8dffd8" stroke-width="1.35"/><circle cx="38.0" cy="8.8" r="1.15" fill="#eafff8"/><circle cx="53.2" cy="12.4" r="3.15" fill="#0e3d32"/><circle cx="53.2" cy="12.4" r="3.15" fill="none" stroke="#8dffd8" stroke-width="1.35"/><circle cx="53.2" cy="12.4" r="1.15" fill="#eafff8"/><circle cx="56.4" cy="29.0" r="3.15" fill="#0e3d32"/><circle cx="56.4" cy="29.0" r="3.15" fill="none" stroke="#8dffd8" stroke-width="1.35"/><circle cx="56.4" cy="29.0" r="1.15" fill="#eafff8"/><circle cx="52.6" cy="45.8" r="3.15" fill="#0e3d32"/><circle cx="52.6" cy="45.8" r="3.15" fill="none" stroke="#8dffd8" stroke-width="1.35"/><circle cx="52.6" cy="45.8" r="1.15" fill="#eafff8"/></g>
 </svg>
