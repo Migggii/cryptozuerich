@@ -179,30 +179,74 @@
         if (label) label.textContent = registered + "/" + max + " Anmeldungen";
         box.classList.toggle("is-full", full);
         if (state) state.hidden = !full;
+        var wait = box.querySelector(".waitlist-note");
+        if (wait) wait.hidden = !(full && !closed);
       }
       var signup = card.querySelector("[data-signup]");
-      if (signup && (closed || full)) {
+      if (signup && closed) {
         var button = document.createElement("button");
         button.type = "button";
         button.className = "btn btn-primary is-closed";
         button.disabled = true;
-        button.textContent = closed ? "Anmeldung geschlossen" : "Ausgebucht";
+        button.textContent = "Anmeldung geschlossen";
         signup.replaceWith(button);
       }
       if (!anlass) return;
       Array.prototype.forEach.call(anlass.options, function (option) {
-        if (option.getAttribute("data-event") !== event.id || (!closed && !full)) return;
-        var note = closed ? " (Anmeldung geschlossen)" : " (ausgebucht)";
-        if (option.getAttribute("data-note") !== note) {
-          var base = option.getAttribute("data-label") || option.textContent;
-          option.textContent = base + note;
-          option.setAttribute("data-note", note);
+        if (option.getAttribute("data-event") !== event.id) return;
+        if (closed) {
+          var closedNote = " (Anmeldung geschlossen)";
+          if (option.getAttribute("data-note") !== closedNote) {
+            var base = option.getAttribute("data-label") || option.textContent;
+            option.textContent = base + closedNote;
+            option.setAttribute("data-note", closedNote);
+          }
+          option.disabled = true;
+          option.setAttribute("disabled", "");
+          if (anlass.value === option.value) anlass.value = "";
+          return;
         }
-        option.disabled = true;
-        option.setAttribute("disabled", "");
-        if (anlass.value === option.value) anlass.value = "";
+        if (full) {
+          var waitNote = " (Warteliste)";
+          if (option.getAttribute("data-note") !== waitNote) {
+            var label = option.getAttribute("data-label") || option.textContent;
+            option.textContent = label + waitNote;
+            option.setAttribute("data-note", waitNote);
+          }
+          option.disabled = false;
+          option.removeAttribute("disabled");
+          return;
+        }
       });
     });
+    syncSubject();
+  }
+
+  var subjectBase = "CryptoZürich Event-Anmeldung";
+
+  function recordFor(id) {
+    var list = window.CZ_EVENTS || [];
+    for (var i = 0; i < list.length; i += 1) {
+      if (list[i].id === id) return list[i];
+    }
+    return null;
+  }
+
+  function waitlistSelected() {
+    if (!anlass) return false;
+    var chosen = anlass.options[anlass.selectedIndex];
+    if (!chosen || chosen.disabled) return false;
+    var record = recordFor(chosen.getAttribute("data-event"));
+    if (!record) return false;
+    var max = Number(record.max);
+    return max > 0 && Number(record.registered) >= max;
+  }
+
+  function syncSubject() {
+    if (!form) return;
+    var field = form.querySelector("input[name='subject']");
+    if (!field) return;
+    field.value = waitlistSelected() ? subjectBase + " – Warteliste" : subjectBase;
   }
 
   applyEvents();
@@ -213,12 +257,15 @@
       if (!chosen || !chosen.disabled) return;
       event.preventDefault();
       event.stopImmediatePropagation();
-      var full = chosen.textContent.indexOf("ausgebucht") !== -1;
-      anlass.setCustomValidity(full ? "Dieser Abend ist ausgebucht." : "Für diesen Abend ist die Anmeldung geschlossen.");
+      anlass.setCustomValidity("Für diesen Abend ist die Anmeldung geschlossen.");
       anlass.reportValidity();
+    }, true);
+    form.addEventListener("submit", function () {
+      syncSubject();
     }, true);
     anlass.addEventListener("change", function () {
       anlass.setCustomValidity("");
+      syncSubject();
     });
   }
 
@@ -231,6 +278,7 @@
       })[0];
       if (!match || match.disabled) return;
       anlass.value = value;
+      syncSubject();
     });
   });
 

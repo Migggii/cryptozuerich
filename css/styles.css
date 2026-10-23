@@ -1047,6 +1047,20 @@ body.nav-open {
   text-transform: uppercase;
 }
 
+.capacity-note,
+.waitlist-note {
+  margin: 0.35rem 0 0;
+  max-width: 36rem;
+  color: var(--faint);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.waitlist-note {
+  color: var(--muted);
+}
+
 .capacity.is-full .capacity-track {
   box-shadow: 0 0 0 1px var(--pink);
 }
