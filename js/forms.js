@@ -27,6 +27,8 @@
           message = "Bitte eine Zahl zwischen 1 und 4 angeben.";
         } else if (field.type === "checkbox" && field.validity.valueMissing) {
           message = "Bitte bestätige das, damit wir weitermachen können.";
+        } else if (field.validity.patternMismatch) {
+          message = "Der Transaktions-Hash beginnt mit 0x und hat danach 64 Zeichen.";
         }
         field.setCustomValidity(message);
       });

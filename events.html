@@ -149,10 +149,26 @@
             <li>
               <div class="rule-copy">
                 <p class="rule-title">Zahlung</p>
-                <p>Zahlungsinfos kommen nach der Anmeldung per Mail. Auf dieser Seite gibt es keine Online-Zahlung und keine Bankdaten.</p>
+                <p>Zahlungsinfos kommen nach der Anmeldung per Mail. Optional kannst du auch direkt in Krypto bezahlen.</p>
               </div>
             </li>
           </ol>
+          <details class="fold crypto-pay" id="krypto-zahlung">
+            <summary>Mit Krypto bezahlen</summary>
+            <p>Ethereum Mainnet. Akzeptiert werden USDC (ERC-20) und ETH.</p>
+            <img class="crypto-qr" src="/assets/event-wallet-qr.svg" width="264" height="264" alt="QR-Code der Event-Wallet auf Ethereum Mainnet">
+            <p class="crypto-address" data-wallet-address></p>
+            <div class="event-actions">
+              <button class="btn btn-ghost" type="button" data-copy-wallet>Adresse kopieren</button>
+              <a class="btn btn-ghost" data-wallet-link href="https://etherscan.io/" target="_blank" rel="noopener noreferrer">Auf Etherscan ansehen<span class="sr-only"> (öffnet in neuem Tab)</span></a>
+            </div>
+            <p class="share-status" data-wallet-status role="status" hidden></p>
+            <ul class="crypto-warns">
+              <li>Nur über das Ethereum-Netzwerk senden. Andere Netzwerke (z.B. Base, BNB, Tron) führen zum Verlust.</li>
+              <li>Betrag in CHF-Gegenwert der Anmeldegebühr; Netzwerkgebühren trägst du selbst.</li>
+              <li>Erst anmelden, dann zahlen.</li>
+            </ul>
+          </details>
         </div>
       </div>
     </section>
@@ -162,7 +178,7 @@
         <div class="section-head">
           <p class="kicker">Die Abende</p>
           <h2>Einer pro Quartal.</h2>
-          <p>Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben. Bis dahin steht der Treffpunkt, die genaue Location folgt. Zahlungsinfos kommen nach der Anmeldung per Mail.</p>
+          <p>Die genaue Adresse der Location wird 1 Monat vor dem Anlass bekannt gegeben. Bis dahin steht der Treffpunkt, die genaue Location folgt. Zahlungsinfos kommen nach der Anmeldung per Mail. Optional kannst du auch direkt in Krypto bezahlen.</p>
         </div>
         <div class="quarter-tabs" role="tablist" aria-label="Quartal filtern">
           <button class="quarter-tab" type="button" role="tab" id="tab-alle" data-quarter-tab="alle" aria-selected="true" aria-controls="programm-liste">Alle</button>
@@ -374,7 +390,7 @@
         <div>
           <p class="kicker">Anmeldung</p>
           <h2>Platz anfragen.</h2>
-          <p>Du meldest dich an, wir schicken die Zahlungsinfos per Mail. Keine Online-Zahlung, keine Bankdaten auf dieser Seite. Die Regeln stehen unter <a href="#so-funktionierts">So funktioniert's</a>. Keine Rückerstattung.</p>
+          <p>Du meldest dich an, wir schicken die Zahlungsinfos per Mail. Optional kannst du auch direkt in Krypto bezahlen. Die Adresse steht unter <a href="#krypto-zahlung">Mit Krypto bezahlen</a>. Keine Bankdaten auf dieser Seite. Die Regeln stehen unter <a href="#so-funktionierts">So funktioniert's</a>. Keine Rückerstattung.</p>
           <h3>Ich bringe mit</h3>
           <p>Tipp eine Idee an. Sie landet im Formular. Du kannst den Text danach noch ändern. Snack, Spiel, ein kurzes Thema, Musik: alles ist willkommen, nichts ist Pflicht.</p>
           <div class="chip-board" role="group" aria-label="Mitbring-Ideen">
@@ -434,6 +450,22 @@
               <input type="text" name="eingeladen_von" maxlength="120" autocomplete="off" aria-describedby="event-von-hint">
               <span class="field-hint" id="event-von-hint">Optional. Der Name der Person, die dich eingeladen hat.</span>
             </label>
+            <fieldset class="pay-choice">
+              <legend>Zahlungsart</legend>
+              <label class="check">
+                <input type="radio" name="zahlungsart" value="Rechnung per Mail" required checked>
+                <span>Rechnung per Mail</span>
+              </label>
+              <label class="check">
+                <input type="radio" name="zahlungsart" value="Krypto">
+                <span>Krypto</span>
+              </label>
+            </fieldset>
+            <label class="field">
+              <span>Bezahlt mit Krypto? Transaktions-Hash (0x…)</span>
+              <input type="text" name="transaktions_hash" inputmode="text" autocapitalize="none" autocorrect="off" spellcheck="false" autocomplete="off" maxlength="66" pattern="^0x[0-9a-fA-F]{64}$" aria-describedby="event-tx-hint">
+              <span class="field-hint" id="event-tx-hint">Optional. 0x und danach 64 Zeichen. Leer lassen, wenn du erst nach der Anmeldung zahlst.</span>
+            </label>
             <div class="check">
               <input id="event-consent" type="checkbox" name="keine_rueckerstattung" value="Ja, keine Rückerstattung akzeptiert" required>
               <label for="event-consent"><span>Ich akzeptiere: keine Rückerstattung. Die Gebühr deckt die Reservation. Konsumation zahle ich selbst, ausser der Anlass ist ausdrücklich als alles inklusive ausgeschrieben. Mehr dazu in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</span></label>
@@ -443,7 +475,7 @@
           </form>
           <div class="form-success" data-form-success role="status" tabindex="-1" hidden>
             <p class="form-success-title">Danke, ist unterwegs.</p>
-            <p>Die Zahlungsinfos kommen per Mail an die Adresse, die du angegeben hast. Der Platz steht, wenn die Gebühr bei uns ist. Keine Rückerstattung.</p>
+            <p>Die Zahlungsinfos kommen per Mail an die Adresse, die du angegeben hast. Wenn du Krypto gewählt hast, steht die Wallet unter <a href="#krypto-zahlung">Mit Krypto bezahlen</a>. Der Platz steht, wenn die Gebühr bei uns ist. Keine Rückerstattung.</p>
             <div class="actions">
               <a class="btn btn-ghost" href="#programm">Zurück zum Programm</a>
               <a class="btn btn-ghost" href="/">Zur Startseite</a>
