@@ -70,9 +70,9 @@ Einmalig einrichten:
 
 `.nojekyll` liegt im Root, damit GitHub die Dateien nicht durch Jekyll filtert. Der Action-Deploy braucht es streng genommen nicht, schadet aber nicht.
 
-## Rechtliches vor dem Betrieb
+## Rechtliches
 
-`impressum.html` und `datenschutz.html` sind Vorlagen. Alles in eckigen Klammern (`[NAME]`, `[STRASSE UND HAUSNUMMER]`, `[E-MAIL-ADRESSE EINTRAGEN]`, …) ersetzen. Das ist keine Rechtsberatung.
+Impressum und Datenschutz nennen M. Gaggia als Privatperson, Industriestr. 13, 8155 Niederhasli. Kontakt nur über `kontakt.html`. Keine E-Mail-Adresse im Seitenquelltext. Die Texte sind keine Rechtsberatung.
 
 ## Struktur
 
