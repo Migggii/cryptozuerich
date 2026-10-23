@@ -23,6 +23,8 @@
           message = "Bitte eine gültige E-Mail angeben.";
         } else if (field.validity.tooShort) {
           message = "Das ist noch etwas kurz.";
+        } else if (field.validity.rangeUnderflow || field.validity.rangeOverflow) {
+          message = "Bitte eine Zahl zwischen 1 und 4 angeben.";
         } else if (field.type === "checkbox" && field.validity.valueMissing) {
           message = "Bitte bestätige das, damit wir weitermachen können.";
         }

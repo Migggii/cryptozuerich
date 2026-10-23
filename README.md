@@ -19,7 +19,7 @@ Dann [http://127.0.0.1:8080/](http://127.0.0.1:8080/). Die Pfade sind absolut (`
 | Datei | Inhalt |
 | --- | --- |
 | `index.html` | Start: Hero, Formate, Termin-Teaser, 0xnode, Newsletter |
-| `events.html` | Formate und Platzhalter-Termine («Datum folgt») |
+| `events.html` | Programm 2027, Regeln, Anmeldung |
 | `community.html` | Werte, für wen, mitmachen |
 | `newsletter.html` | Anmeldung |
 | `kontakt.html` | Kontaktformular |
@@ -29,17 +29,15 @@ Dann [http://127.0.0.1:8080/](http://127.0.0.1:8080/). Die Pfade sind absolut (`
 
 Header, Navigation und Footer stehen in jeder HTML-Datei. Wenn du dort etwas änderst, pass alle Seiten an.
 
-## Event hinzufügen
+## Programm 2027
 
-1. In `events.html` einen Block `<article class="event-card">` kopieren (Abschnitt `#termine`).
-2. Titel, Format, Ort und Text anpassen.
-3. Solange kein Tag feststeht: «Datum folgt» stehen lassen, die Klasse `is-placeholder` behalten.
-4. Sobald der Termin steht: das Datum einsetzen, `is-placeholder` und den Stempel «Datum folgt» entfernen.
-5. Dieselbe Karte auf der Startseite im Abschnitt `#als-naechstes` angleichen, damit der Teaser nicht hinterherhinkt.
+Die vier Anlässe stehen in `events.html` (`#programm`) und als Teaser auf der Startseite (Hero-Ticket und `#als-naechstes`). Preise, Daten und «Limitiert: max X Plätze» nur an beiden Orten gleichzeitig ändern. Kalenderdateien liegen unter `events/*.ics`.
+
+Die Anmeldung ist das Formular auf `events.html`. Keine Zahlungsdaten und keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms.
 
 ## Formulare (Web3Forms)
 
-Kontakt und Newsletter senden per `fetch` an `https://api.web3forms.com/submit`.
+Kontakt, Newsletter und Event-Anmeldung senden per `fetch` an `https://api.web3forms.com/submit`.
 
 Der Access Key steht **nur** in `js/config.js` (`web3formsAccessKey`). Beide Formulare lesen ihn von dort und setzen ihn beim Senden als `access_key`. Im HTML ist das Feld leer, damit der Key nicht doppelt gepflegt wird.
 
@@ -47,6 +45,7 @@ Betreff, fest in der jeweiligen Seite:
 
 - Kontakt: `CryptoZürich Kontakt`
 - Newsletter: `CryptoZürich Newsletter-Anmeldung`
+- Event-Anmeldung: `CryptoZürich Event-Anmeldung`
 
 So wechselst du den Key:
 
