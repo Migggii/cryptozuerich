@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xn--cryptozrich-zhb.ch/sitemap.xml

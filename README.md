@@ -1,1 +1,93 @@
-# cryptozuerich
+# CryptoZürich
+
+Statische Website für die Community [CryptoZürich](https://xn--cryptozrich-zhb.ch/) — Mini-Events für Krypto-Fans in Zürich. Kurse und Schulungen laufen über [0xnode.ch](https://www.0xnode.ch).
+
+Kein Build-Schritt. HTML, CSS und ein wenig Vanilla-JS. Kein Tracking.
+
+## Lokal ansehen
+
+Im Repo-Root:
+
+```bash
+python3 -m http.server 8080
+```
+
+Dann [http://127.0.0.1:8080/](http://127.0.0.1:8080/). Die Pfade sind absolut (`/css/...`), deshalb brauchst du einen lokalen Server und nicht `file://`.
+
+## Seiten
+
+| Datei | Inhalt |
+| --- | --- |
+| `index.html` | Start: Hero, Formate, Termin-Teaser, 0xnode, Newsletter |
+| `events.html` | Formate und Platzhalter-Termine («Datum folgt») |
+| `community.html` | Werte, für wen, mitmachen |
+| `newsletter.html` | Anmeldung |
+| `kontakt.html` | Kontaktformular |
+| `impressum.html` | Impressum, Vorlage mit Platzhaltern |
+| `datenschutz.html` | Datenschutzerklärung (nDSG), Vorlage mit Platzhaltern |
+| `404.html` | Seite nicht gefunden |
+
+Header, Navigation und Footer stehen in jeder HTML-Datei. Wenn du dort etwas änderst, pass alle Seiten an.
+
+## Event hinzufügen
+
+1. In `events.html` einen Block `<article class="event-card">` kopieren (Abschnitt `#termine`).
+2. Titel, Format, Ort und Text anpassen.
+3. Solange kein Tag feststeht: «Datum folgt» stehen lassen, die Klasse `is-placeholder` behalten.
+4. Sobald der Termin steht: das Datum einsetzen, `is-placeholder` und den Stempel «Datum folgt» entfernen.
+5. Dieselbe Karte auf der Startseite im Abschnitt `#als-naechstes` angleichen, damit der Teaser nicht hinterherhinkt.
+
+## Formulare (Web3Forms)
+
+Kontakt und Newsletter senden per `fetch` an `https://api.web3forms.com/submit`.
+
+Der Access Key steht **nur** in `js/config.js` (`web3formsAccessKey`). Beide Formulare lesen ihn von dort und setzen ihn beim Senden als `access_key`. Im HTML ist das Feld leer, damit der Key nicht doppelt gepflegt wird.
+
+Betreff, fest in der jeweiligen Seite:
+
+- Kontakt: `CryptoZürich Kontakt`
+- Newsletter: `CryptoZürich Newsletter-Anmeldung`
+
+So wechselst du den Key:
+
+1. Auf [web3forms.com](https://web3forms.com) einen Access Key erzeugen.
+2. In `js/config.js` den Wert von `web3formsAccessKey` ersetzen.
+3. Im Web3Forms-Dashboard die erlaubte Domain auf `cryptozürich.ch` / `xn--cryptozrich-zhb.ch` beschränken.
+
+Der Key ist ein öffentlicher Client-Key und darf im Repository stehen. Eine E-Mail-Adresse des Betreibers steht absichtlich nirgends im Code. Antworten laufen über das Web3Forms-Konto. Beide Formulare haben ein Honeypot-Feld (`botcheck`).
+
+## GitHub Pages
+
+Der Workflow `.github/workflows/pages.yml` veröffentlicht den Repository-Root bei jedem Push auf `main` (und manuell über «Run workflow»).
+
+Einmalig einrichten:
+
+1. GitHub → Repository → **Settings → Pages**.
+2. **Build and deployment → Source: GitHub Actions** (nicht «Deploy from a branch»).
+3. Den Workflow auf `main` laufen lassen. Der erste Lauf klappt erst, nachdem Pages auf GitHub Actions steht.
+4. Custom Domain: die Datei `CNAME` enthält `xn--cryptozrich-zhb.ch`. In den Pages-Einstellungen dieselbe Domain eintragen. HTTPS einschalten, sobald das Zertifikat da ist.
+5. DNS ist bereits gesetzt (A-Records der Apex-Domain auf die GitHub-Pages-IPs, `www` als CNAME auf `migggii.github.io`). Daran muss hier nichts geändert werden. Die kanonische Domain ist die Apex-Domain ohne `www`.
+
+`.nojekyll` liegt im Root, damit GitHub die Dateien nicht durch Jekyll filtert. Der Action-Deploy braucht es streng genommen nicht, schadet aber nicht.
+
+## Rechtliches vor dem Betrieb
+
+`impressum.html` und `datenschutz.html` sind Vorlagen. Alles in eckigen Klammern (`[NAME]`, `[STRASSE UND HAUSNUMMER]`, `[E-MAIL-ADRESSE EINTRAGEN]`, …) ersetzen. Das ist keine Rechtsberatung.
+
+## Struktur
+
+```
+index.html, events.html, community.html, newsletter.html, kontakt.html
+impressum.html, datenschutz.html, 404.html
+css/styles.css
+js/config.js      Web3Forms-Key
+js/main.js        Navigation, Jahr
+js/forms.js       Versand, Erfolg und Fehler
+assets/mark.svg   Logo
+assets/fonts/     Syne und Outfit (SIL OFL)
+CNAME
+.nojekyll
+.github/workflows/pages.yml
+```
+
+Schriften: [Syne](https://gitlab.com/bonjour-monde/fonderie/syne-typeface) und [Outfit](https://github.com/Outfitio/Outfit-Fonts), je SIL Open Font License 1.1. Lizenztexte liegen neben den Dateien.
