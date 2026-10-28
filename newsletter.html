@@ -7,7 +7,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://api.web3forms.com; form-action 'self' https://api.web3forms.com; base-uri 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://api.web3forms.com https://4bf2ff4a.sibforms.com; form-action 'self' https://api.web3forms.com https://4bf2ff4a.sibforms.com; base-uri 'self'; object-src 'none'">
   <title>Newsletter — CryptoZürich</title>
   <meta name="description" content="Trag dich ein. Du bekommst Bescheid, wenn der nächste CryptoZürich Mini-Event steht. Kein Spam.">
   <link rel="canonical" href="https://xn--cryptozrich-zhb.ch/newsletter.html">
@@ -81,36 +81,26 @@
       <div class="container form-layout">
         <div>
           <h2>Was du bekommst</h2>
-          <p class="lead">Eine kurze Nachricht, wenn ein Meetup, eine Pizza-Runde oder ein Abend auf dem Uetliberg feststeht. Abmelden geht jederzeit über das <a href="/kontakt.html">Kontaktformular</a>.</p>
-          <p class="aside-note">Deine Angaben gehen zum Versand über Web3Forms. Mehr dazu in der <a href="/datenschutz.html">Datenschutzerklärung</a>. Kurse gibt es nicht hier, sondern auf <a href="https://www.0xnode.ch" target="_blank" rel="noopener noreferrer">0xnode.ch<span class="sr-only"> (öffnet in neuem Tab)</span></a>.</p>
+          <p class="lead">Eine kurze Nachricht, wenn ein Meetup, eine Pizza-Runde oder ein Abend auf dem Uetliberg feststeht. Zuerst kommt eine Bestätigungsmail. Abmelden geht jederzeit über den Link in jeder Mail.</p>
+          <p class="aside-note">Die Anmeldung läuft über Brevo, mit Double-Opt-in. Mehr dazu in der <a href="/datenschutz.html">Datenschutzerklärung</a>. Kurse gibt es nicht hier, sondern auf <a href="https://www.0xnode.ch" target="_blank" rel="noopener noreferrer">0xnode.ch<span class="sr-only"> (öffnet in neuem Tab)</span></a>.</p>
         </div>
-        <div class="form-shell">
-          <form data-cz-form action="#" method="post" autocomplete="on">
-            <input type="hidden" name="access_key" value="">
-            <input type="hidden" name="subject" value="CryptoZürich Newsletter-Anmeldung">
-            <input type="hidden" name="seite" value="https://xn--cryptozrich-zhb.ch/newsletter.html">
+        <div class="form-shell newsletter-shell">
+          <form data-brevo-form action="#" method="post" autocomplete="on">
             <div class="hp-field" aria-hidden="true">
-              <label>Nicht ausfüllen <input type="checkbox" name="botcheck" tabindex="-1"></label>
+              <label>Nicht ausfüllen <input type="text" name="email_address_check" tabindex="-1" autocomplete="off" value=""></label>
             </div>
-            <label class="field">
-              <span>Name <span class="field-hint">(optional)</span></span>
-              <input type="text" name="name" autocomplete="name" maxlength="120">
-            </label>
+            <input type="hidden" name="locale" value="de">
+            <input type="hidden" name="html_type" value="simple">
             <label class="field">
               <span>E-Mail</span>
-              <input type="email" name="email" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required maxlength="200" aria-describedby="mail-hint">
-              <span class="field-hint" id="mail-hint">Wir schreiben nur, wenn ein Event ansteht.</span>
+              <input type="email" name="EMAIL" autocomplete="email" inputmode="email" autocapitalize="none" spellcheck="false" required maxlength="200" placeholder="deine@mail.ch" aria-describedby="mail-hint">
+              <span class="field-hint" id="mail-hint">Ca. 1x pro Monat: Mini-Events in Zürich &amp; Krypto-Wissen von 0xnode.ch. Du bekommst zuerst eine Bestätigungsmail. Abmeldung jederzeit.</span>
             </label>
-            <div class="check">
-              <input id="newsletter-consent" type="checkbox" name="einwilligung" value="Ja" required>
-              <label for="newsletter-consent"><span>Ich bin einverstanden, dass CryptoZürich mich per E-Mail über Events und Community-News informiert. Abmelden kann ich mich jederzeit über das Kontaktformular. Hinweise stehen in der <a href="/datenschutz.html">Datenschutzerklärung</a>.</span></label>
-            </div>
             <p class="form-status" data-form-status role="alert" tabindex="-1" hidden></p>
-            <button class="btn btn-primary" type="submit">Eintragen</button>
+            <button class="btn btn-primary" type="submit">Anmelden</button>
           </form>
           <div class="form-success" data-form-success role="status" tabindex="-1" hidden>
-            <p class="form-success-title">Du bist dabei.</p>
-            <p>Danke. Wir schreiben dir, wenn der nächste Mini-Event steht.</p>
+            <p>Fast geschafft! Bitte bestätige deine Anmeldung in der Mail, die wir dir geschickt haben.</p>
             <div class="actions">
               <a class="btn btn-ghost" href="/events.html">Events ansehen</a>
               <a class="btn btn-ghost" href="/">Zur Startseite</a>

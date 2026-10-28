@@ -45,17 +45,18 @@ Die Balken auf der Programmseite lesen eine Datei: `js/events-data.js`. Pro Aben
 
 Die Anmeldung ist das Formular auf `events.html`. Keine E-Mail-Adresse im Quelltext. Zahlungsinfos gehen nach der Anmeldung per Mail über Web3Forms. Optional ist eine Zahlung in USDC oder ETH auf Ethereum Mainnet. Die Wallet steht nur in `js/config.js` (`EVENT_WALLET`). Die Seite setzt Adresse, Kopier-Button und Etherscan-Link von dort. Der QR-Code liegt als lokale Datei unter `assets/event-wallet-qr.svg`.
 
-## Formulare (Web3Forms)
+## Formulare
 
-Kontakt, Newsletter und Event-Anmeldung senden per `fetch` an `https://api.web3forms.com/submit`.
+Kontakt und Event-Anmeldung senden per `fetch` an `https://api.web3forms.com/submit`.
 
 Der Access Key steht **nur** in `js/config.js` (`web3formsAccessKey`). Beide Formulare lesen ihn von dort und setzen ihn beim Senden als `access_key`. Im HTML ist das Feld leer, damit der Key nicht doppelt gepflegt wird.
 
 Betreff, fest in der jeweiligen Seite:
 
 - Kontakt: `CryptoZürich Kontakt`
-- Newsletter: `CryptoZürich Newsletter-Anmeldung`
 - Event-Anmeldung: `CryptoZürich Event-Anmeldung`
+
+Der Newsletter auf `newsletter.html` geht an Brevo (Double-Opt-in). Die Formular-URL steht nur in `js/config.js` (`BREVO_FORM_URL`). Es werden keine Brevo-Skripte geladen. Felder: `EMAIL`, Honeypot `email_address_check`, `locale=de`, `html_type=simple`. Nach der Bestätigung kann Brevo auf eine Seite mit `?newsletter=bestaetigt` leiten. Dann erscheint ein Hinweisbanner.
 
 So wechselst du den Key:
 
@@ -63,7 +64,7 @@ So wechselst du den Key:
 2. In `js/config.js` den Wert von `web3formsAccessKey` ersetzen.
 3. Im Web3Forms-Dashboard die erlaubte Domain auf `cryptozürich.ch` / `xn--cryptozrich-zhb.ch` beschränken.
 
-Der Key ist ein öffentlicher Client-Key und darf im Repository stehen. Eine E-Mail-Adresse des Betreibers steht absichtlich nirgends im Code. Antworten laufen über das Web3Forms-Konto. Beide Formulare haben ein Honeypot-Feld (`botcheck`).
+Der Key ist ein öffentlicher Client-Key und darf im Repository stehen. Eine E-Mail-Adresse des Betreibers steht absichtlich nirgends im Code. Antworten laufen über das Web3Forms-Konto. Kontakt und Event-Anmeldung haben ein Honeypot-Feld (`botcheck`). Der Newsletter hat ein leeres Feld `email_address_check`.
 
 ## GitHub Pages
 

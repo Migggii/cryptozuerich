@@ -1473,6 +1473,60 @@ body.nav-open {
   box-shadow: var(--shadow);
 }
 
+.newsletter-shell {
+  box-shadow: inset 0 3px 0 var(--pink), var(--shadow);
+}
+
+.newsletter-shell .btn-primary,
+.newsletter-shell .btn-primary:hover {
+  background: var(--pink);
+  border-color: var(--pink);
+  color: #2a0416;
+}
+
+.newsletter-shell .btn-primary:hover {
+  background: #ff7ec0;
+  border-color: #ff7ec0;
+}
+
+.confirm-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+  margin: 0 0 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: var(--pink);
+  color: #2a0416;
+}
+
+.confirm-banner p {
+  margin: 0;
+  font-weight: 700;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.confirm-banner button {
+  flex: none;
+  min-height: 44px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #2a0416;
+  background: transparent;
+  color: #2a0416;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.confirm-banner button:hover {
+  background: #2a0416;
+  color: var(--pink);
+}
+
 form {
   display: grid;
   gap: 0.95rem;
