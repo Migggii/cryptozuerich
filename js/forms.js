@@ -136,4 +136,113 @@
       success.focus();
     }
   });
+
+  var brevoUrl = config.BREVO_FORM_URL || "";
+
+  document.querySelectorAll("form[data-brevo-form]").forEach(function (form) {
+    var shell = form.closest(".form-shell");
+    var status = form.querySelector("[data-form-status]");
+    var success = shell ? shell.querySelector("[data-form-success]") : null;
+    var button = form.querySelector("[type='submit']");
+    var buttonLabel = button ? button.textContent : "";
+    var email = form.querySelector("input[name='EMAIL']");
+    var honeypot = form.querySelector("input[name='email_address_check']");
+
+    form.querySelectorAll("input").forEach(function (field) {
+      field.addEventListener("invalid", function () {
+        var message = "Bitte eine E-Mail angeben.";
+        if (field.validity.typeMismatch) {
+          message = "Bitte eine gültige E-Mail angeben.";
+        }
+        field.setCustomValidity(message);
+      });
+      field.addEventListener("input", function () {
+        field.setCustomValidity("");
+      });
+    });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      clearStatus();
+      if (email) email.value = email.value.trim();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (honeypot && honeypot.value) {
+        showSuccess();
+        return;
+      }
+
+      if (!brevoUrl) {
+        showError("Das Formular ist noch nicht freigeschaltet.");
+        return;
+      }
+
+      if (!button || !email) return;
+      button.disabled = true;
+      button.setAttribute("aria-busy", "true");
+      button.textContent = "Wird gesendet …";
+
+      var body = new URLSearchParams();
+      body.set("EMAIL", email.value.trim());
+      body.set("email_address_check", honeypot ? honeypot.value : "");
+      body.set("locale", "de");
+      body.set("html_type", "simple");
+
+      var controller = new AbortController();
+      var timer = setTimeout(function () {
+        controller.abort();
+      }, 20000);
+
+      fetch(brevoUrl, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body,
+        signal: controller.signal
+      })
+        .then(function () {
+          form.reset();
+          showSuccess();
+        })
+        .catch(function (error) {
+          if (error && error.name === "AbortError") {
+            showError("Das hat zu lange gedauert. Versuch es noch einmal.");
+            return;
+          }
+          showError("Senden hat nicht geklappt. Prüfe deine Verbindung und versuch es noch einmal.");
+        })
+        .finally(function () {
+          clearTimeout(timer);
+          if (!button || button.closest("form").hidden) return;
+          button.disabled = false;
+          button.removeAttribute("aria-busy");
+          button.textContent = buttonLabel;
+        });
+    });
+
+    function clearStatus() {
+      if (!status) return;
+      status.hidden = true;
+      status.textContent = "";
+    }
+
+    function showError(message) {
+      if (!status) return;
+      status.hidden = false;
+      status.textContent = message;
+      status.focus();
+    }
+
+    function showSuccess() {
+      clearStatus();
+      if (!success) return;
+      form.hidden = true;
+      success.hidden = false;
+      success.focus();
+    }
+  });
 })();

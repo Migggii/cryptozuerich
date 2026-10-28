@@ -59,4 +59,25 @@
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
+
+  var params = new URLSearchParams(window.location.search);
+  if (params.get("newsletter") === "bestaetigt" && main) {
+    var banner = document.createElement("div");
+    banner.className = "confirm-banner";
+    banner.setAttribute("role", "status");
+    var text = document.createElement("p");
+    text.textContent = "Danke! Deine Newsletter-Anmeldung ist bestätigt. 🎉";
+    var close = document.createElement("button");
+    close.type = "button";
+    close.textContent = "Schliessen";
+    close.addEventListener("click", function () {
+      banner.remove();
+      params.delete("newsletter");
+      var next = window.location.pathname + (params.toString() ? "?" + params.toString() : "") + window.location.hash;
+      window.history.replaceState(null, "", next);
+    });
+    banner.appendChild(text);
+    banner.appendChild(close);
+    main.insertBefore(banner, main.firstChild);
+  }
 })();
