@@ -6,9 +6,8 @@
 window.CZ_NEWS = [
   {
     date: "2026-10-29",
-    slug: "so-liest-sich-ein-bericht",
-    title: "Entwurf: So liest sich ein Bericht",
-    teaser: "Muster für das News-Layout. Dieser Text ist ein Entwurf und nicht veröffentlicht.",
-    draft: true
+    slug: "black-october-hacks-phishing",
+    title: "Black October: Hacks, Phishing, Sicherheit",
+    teaser: "Im Oktober 2026 häufen sich die Meldungen zu Einbrüchen, gestohlenen Zugängen und Phishing. Hier steht, was du selbst prüfen kannst."
   }
 ];
