@@ -33,7 +33,7 @@ Header, Navigation und Footer stehen in jeder HTML-Datei. Der Link «Zurück zu 
 
 ## News
 
-Die Liste steht in `js/news-data.js`. `draft: true` bleibt von `news.html` fern. Für einen neuen Bericht `news/_vorlage.html` nach `news/YYYY-MM-DD-slug.html` kopieren und Titel, Beschreibung und Open-Graph-Felder im Kopf setzen. Die Newsletter-Box unter dem Text nutzt dasselbe Brevo-Formular wie `newsletter.html`. Kommentare (`#remark42`) laden erst, wenn `REMARK42_HOST` in `js/config.js` gesetzt ist.
+Die Liste steht in `js/news-data.js`. `draft: true` bleibt von `news.html` fern. Für einen neuen Bericht `news/_vorlage.html` nach `news/YYYY-MM-DD-slug.html` kopieren und Titel, Beschreibung und Open-Graph-Felder im Kopf setzen. Die Newsletter-Box unter dem Text nutzt dasselbe Brevo-Formular wie `newsletter.html`. Kommentare (`#remark42`) laden das Remark42-Embed von `REMARK42_HOST` mit `site_id` `cryptozuerich`. Wenn das Skript nicht lädt, bleibt die Seite nutzbar.
 
 ## Programm 2027
 

@@ -2042,8 +2042,13 @@ select:user-invalid {
 }
 
 .news-comments h2 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.35rem;
   font-size: clamp(1.35rem, 2.5vw, 1.7rem);
+}
+
+.news-comments-note {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
 }
 
 #remark42:empty {
