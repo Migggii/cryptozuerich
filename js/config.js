@@ -3,7 +3,7 @@
    Kontakt und Event-Anmeldung lesen den Key von hier.
    Das Newsletter-Formular liest BREVO_FORM_URL von hier.
    Die Event-Seite liest EVENT_WALLET von hier.
-   Remark42 bleibt aus, solange REMARK42_HOST leer ist.
+   Kommentare lesen REMARK42_HOST und REMARK42_SITE_ID von hier.
    Adresse und Formular-URL nicht ins HTML kopieren.
    Web3Forms-Keys sind öffentlich und fürs Frontend gedacht:
    https://web3forms.com
@@ -14,5 +14,6 @@ window.CZ_CONFIG = {
   endpoint: "https://api.web3forms.com/submit",
   BREVO_FORM_URL: "https://4bf2ff4a.sibforms.com/serve/MUIFANwUJ-aDSAJhAfNAi5u4DgvV7BdPsFvbCI0Ej1_CrO3IU6rtleTAElzxQW7xXem6Lh3oaA5-LQmXegZCW-WSCWDGMdSWy58R5RSj5-iFI1uzAsTHhdLHGctqphBlym4IJ3L17xq9p9ANSLf-Ccm46wolWWYAFFY4DaYZGrWbcpyuAwC4YKZJWiVzospx2iYHtij6evpDLhwMiQ==",
   EVENT_WALLET: "0x17F1Abe12EC49d0A5dF618266B2b7A73DD7642c1",
-  REMARK42_HOST: ""
+  REMARK42_HOST: "https://kommentare.xn--cryptozrich-zhb.ch",
+  REMARK42_SITE_ID: "cryptozuerich"
 };

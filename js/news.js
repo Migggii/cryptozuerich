@@ -46,8 +46,38 @@
   }
 
   var comments = document.getElementById("remark42");
-  var host = window.CZ_CONFIG && window.CZ_CONFIG.REMARK42_HOST;
-  if (comments && host) {
-    comments.setAttribute("data-host", host);
+  var host = (window.CZ_CONFIG && window.CZ_CONFIG.REMARK42_HOST) || "";
+  var siteId = (window.CZ_CONFIG && window.CZ_CONFIG.REMARK42_SITE_ID) || "";
+  if (!comments || !host || !siteId) return;
+
+  try {
+    var canonical = document.querySelector('link[rel="canonical"]');
+    var scheme = document.querySelector('meta[name="color-scheme"]');
+    var theme = scheme && String(scheme.content).indexOf("light") === 0 ? "light" : "dark";
+    var pageUrl = canonical && canonical.href
+      ? canonical.href
+      : window.location.origin + window.location.pathname;
+    window.remark_config = {
+      host: host,
+      site_id: siteId,
+      components: ["embed"],
+      url: pageUrl,
+      locale: "de",
+      theme: theme,
+      no_footer: true
+    };
+    var components = window.remark_config.components;
+    var target = document.head || document.body;
+    for (var i = 0; i < components.length; i++) {
+      var script = document.createElement("script");
+      script.type = "module";
+      script.async = true;
+      script.defer = true;
+      script.src = host.replace(/\/$/, "") + "/web/" + components[i] + ".mjs";
+      script.onerror = function () {};
+      target.appendChild(script);
+    }
+  } catch (error) {
+    return;
   }
 })();
