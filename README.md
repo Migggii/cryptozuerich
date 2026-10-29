@@ -22,12 +22,18 @@ Dann [http://127.0.0.1:8080/](http://127.0.0.1:8080/). Die Pfade sind absolut (`
 | `events.html` | Programm 2027, Regeln, Anmeldung |
 | `community.html` | Werte, für wen, mitmachen |
 | `newsletter.html` | Anmeldung |
+| `news.html` | News-Liste, neueste Berichte zuerst |
+| `news/*.html` | Einzelne Berichte. Vorlage: `news/_vorlage.html` |
 | `kontakt.html` | Kontaktformular |
 | `impressum.html` | Impressum, Vorlage mit Platzhaltern |
 | `datenschutz.html` | Datenschutzerklärung (nDSG), Vorlage mit Platzhaltern |
 | `404.html` | Seite nicht gefunden |
 
 Header, Navigation und Footer stehen in jeder HTML-Datei. Der Link «Zurück zu 0xnode.ch» steht im Header und im Footer jeder Seite, inklusive Impressum, Datenschutz und 404. Wenn du dort etwas änderst, pass alle Seiten an.
+
+## News
+
+Die Liste steht in `js/news-data.js`. `draft: true` bleibt von `news.html` fern. Für einen neuen Bericht `news/_vorlage.html` nach `news/YYYY-MM-DD-slug.html` kopieren und Titel, Beschreibung und Open-Graph-Felder im Kopf setzen. Die Newsletter-Box unter dem Text nutzt dasselbe Brevo-Formular wie `newsletter.html`. Kommentare (`#remark42`) laden erst, wenn `REMARK42_HOST` in `js/config.js` gesetzt ist.
 
 ## Programm 2027
 
