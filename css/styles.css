@@ -1994,6 +1994,31 @@ select:user-invalid {
   font-size: clamp(2.1rem, 6vw, 3.4rem);
 }
 
+.news-figure {
+  margin: 0 0 1.15rem;
+}
+
+.news-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+.news-sources-title {
+  margin: 1.4rem 0 0.45rem;
+  font-size: 1.15rem;
+}
+
+.news-sources {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+}
+
+.news-sources li + li {
+  margin-top: 0.4rem;
+}
+
 .news-body p {
   margin: 0;
   color: var(--muted);
