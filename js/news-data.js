@@ -7,7 +7,7 @@ window.CZ_NEWS = [
   {
     date: "2026-10-29",
     slug: "black-october-hacks-phishing",
-    title: "Black October: Hacks, Phishing, Sicherheit",
-    teaser: "Im Oktober 2026 häufen sich die Meldungen zu Einbrüchen, gestohlenen Zugängen und Phishing. Hier steht, was du selbst prüfen kannst."
+    title: "Black October: Bridge-Hack, Wallet-Bug und Phishing – was diese Woche zählt",
+    teaser: "Ein Bridge-Exploit, eine gefährliche Lücke in Electrum und täuschend echte Phishing-Seiten: Die letzten Tage zeigen, dass Sicherheit im Krypto-Alltag wichtiger ist denn je. Gleichzeitig rückt die traditionelle Finanzwelt weiter an Krypto heran."
   }
 ];

@@ -2004,19 +2004,32 @@ select:user-invalid {
   border-radius: 18px;
 }
 
-.news-sources-title {
-  margin: 1.4rem 0 0.45rem;
+.news-body h2,
+.news-body h3 {
+  margin: 1.6rem 0 0.45rem;
+  overflow-wrap: anywhere;
+}
+
+.news-body h2 {
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+}
+
+.news-body h3 {
   font-size: 1.15rem;
 }
 
-.news-sources {
-  margin: 0;
+.news-quellen {
+  margin: 0.35rem 0 0;
   padding-left: 1.15rem;
   color: var(--muted);
 }
 
-.news-sources li + li {
-  margin-top: 0.4rem;
+.news-quellen li + li {
+  margin-top: 0.45rem;
+}
+
+.news-quellen a {
+  overflow-wrap: anywhere;
 }
 
 .news-body p {
