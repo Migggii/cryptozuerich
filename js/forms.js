@@ -140,7 +140,7 @@
   var brevoUrl = config.BREVO_FORM_URL || "";
 
   document.querySelectorAll("form[data-brevo-form]").forEach(function (form) {
-    var shell = form.closest(".form-shell");
+    var shell = form.closest(".form-shell") || form.parentElement;
     var status = form.querySelector("[data-form-status]");
     var success = shell ? shell.querySelector("[data-form-success]") : null;
     var button = form.querySelector("[type='submit']");
