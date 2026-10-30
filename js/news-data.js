@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-10-30",
+    slug: "binance-hack-6-milliarden",
+    title: "Binance-Hack: 6,3 Milliarden Dollar, vermutlich über einen Mitarbeiter-Laptop",
+    teaser: "Rund 6,3 Milliarden Dollar flossen aus Binance-Hot-Wallets ab, der bisher grösste Krypto-Diebstahl. Was passiert ist und wie du dich schützt."
+  },
+  {
     date: "2026-10-29",
     slug: "black-october-hacks-phishing",
     title: "Black October: Bridge-Hack, Wallet-Bug und Phishing – was diese Woche zählt",
