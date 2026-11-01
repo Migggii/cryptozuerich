@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-01",
+    slug: "dns-hijacking-chainalysis-oktober",
+    title: "Gefälschte DeFi-Seiten, Leck bei Chainalysis und ein roter Oktober",
+    teaser: "Angreifer leiten Besucher echter DeFi-Seiten auf Wallet-Drainer um, sogar Chainalysis wurde gehackt, und Bitcoin schliesst den Oktober mit einem Minus. Was du jetzt wissen musst."
+  },
+  {
     date: "2026-10-30",
     slug: "binance-hack-6-milliarden",
     title: "Binance-Hack: 6,3 Milliarden Dollar, vermutlich über einen Mitarbeiter-Laptop",
