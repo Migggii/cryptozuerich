@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-04",
+    slug: "nubank-schweiz-digitalbanken",
+    title: "Nach Revolut kommt Nubank: Digitalbanken drängen in die Schweiz",
+    teaser: "Nubank baut in Zug still sein Europa-Geschäft auf, eine französische Bank verliert über 133 Millionen an Hacker und BTCPay-Server werden geleert. Was du jetzt wissen musst."
+  },
+  {
     date: "2026-11-01",
     slug: "dns-hijacking-chainalysis-oktober",
     title: "Gefälschte DeFi-Seiten, Leck bei Chainalysis und ein roter Oktober",
