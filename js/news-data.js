@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-09",
+    slug: "nvidia-spionage-keplr-lnbits",
+    title: "Nvidia-Affäre: Spionageverdacht um Jensen Huang – und Keplr-Wallets geleert",
+    teaser: "Nvidia untersucht, ob Chef Jensen Huang Ziel eines chinesischen Geheimdienstes war. Dazu: Lücke beim Keplr-Login, LNbits-Server müssen offline und Binance dementiert ein Datenleck. Was du jetzt wissen musst."
+  },
+  {
     date: "2026-11-04",
     slug: "nubank-schweiz-digitalbanken",
     title: "Nach Revolut kommt Nubank: Digitalbanken drängen in die Schweiz",
