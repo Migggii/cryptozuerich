@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-13",
+    slug: "wochenueberblick-nvidia-bitcoin",
+    title: "Wochenüberblick: Nvidia-Chef tritt zurück, Bitcoin fällt unter 70'000",
+    teaser: "Jensen Huang gibt nach der Spionage-Affäre seinen Posten ab, Bitcoin rutscht unter 70'000 Dollar. Dazu: manipulierte Trezor-Wallets, 1,2 Milliarden aus dem Binance-Hack beschlagnahmt und ein Update für LNbits. Was du diese Woche wissen musst."
+  },
+  {
     date: "2026-11-09",
     slug: "nvidia-spionage-keplr-lnbits",
     title: "Nvidia-Affäre: Spionageverdacht um Jensen Huang – und Keplr-Wallets geleert",
