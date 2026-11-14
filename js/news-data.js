@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-14",
+    slug: "sonderbericht-cyberangriffe-stoerungen",
+    title: "Sonderbericht: Grosse Störungen und Cyberangriffe – was wirklich dahintersteckt",
+    teaser: "Microsoft-Ausfall, Flugstopp in den USA und Warnungen auf X: Nicht alles ist ein Hackerangriff. Was bestätigt ist, wo echte Gefahren lauern und wie du dich jetzt schützt."
+  },
+  {
     date: "2026-11-13",
     slug: "wochenueberblick-nvidia-bitcoin",
     title: "Wochenüberblick: Nvidia-Chef tritt zurück, Bitcoin fällt unter 70'000",
