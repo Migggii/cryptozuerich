@@ -2094,3 +2094,56 @@ select:user-invalid {
   border: 1px dashed rgba(255, 45, 135, 0.35);
   border-radius: 16px;
 }
+
+/* Event-Bilder im Programm (events.html) */
+.event-media {
+  position: relative;
+  margin: -1.25rem -1.2rem 1.1rem;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-raise);
+  aspect-ratio: 16 / 9;
+}
+
+.event-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.event-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(7, 8, 13, 0) 55%, rgba(16, 20, 30, 0.75) 100%);
+}
+
+.event-media-note {
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.5rem;
+  z-index: 1;
+  margin: 0;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(7, 8, 13, 0.55);
+  border-radius: 4px;
+}
+
+@media (min-width: 700px) {
+  .event-media {
+    aspect-ratio: 16 / 7;
+  }
+}
+
+@media print {
+  .event-media {
+    display: none;
+  }
+}
