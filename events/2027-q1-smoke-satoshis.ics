@@ -27,9 +27,10 @@ DTSTAMP:20261023T120000Z
 DTSTART;TZID=Europe/Zurich:20270313T180000
 DTEND;TZID=Europe/Zurich:20270313T230000
 SUMMARY:Smoke & Satoshis — CryptoZürich
-DESCRIPTION:Zigarren-Lounge in Zürich. Anmeldegebühr 50 CHF\, deckt den
-  Raum. Whisky und Zigarren zahlst du selbst. Limitiert: max 20 Plätze. K
- eine Rückerstattung. Anmeldung auf der Website. Keine Anlageberatung.
+DESCRIPTION:Zigarren-Lounge in Zürich. Thema: Emotionen im Crypto-Invest. 
+ Anmeldegebühr 50 CHF\, deckt den Raum und einen Welcome Drink. Whisky und
+  Zigarren zahlst du selbst. Limitiert: max 20 Plätze. Keine Rückerstattu
+ ng. Anmeldung auf der Website. Keine Anlageberatung.
 LOCATION:Zürich
 URL:https://xn--cryptozrich-zhb.ch/events.html
 END:VEVENT
