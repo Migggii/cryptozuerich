@@ -7,6 +7,12 @@
    (?v=… bei /js/news-data.js), sonst zeigen Browser bis zu 10 Minuten die alte Liste. */
 window.CZ_NEWS = [
   {
+    date: "2026-11-19",
+    slug: "bitcoin-viermonatstief-optimizely-hack",
+    title: "Bitcoin auf Viermonatstief – und Krypto-Diebescode auf 178 Websites",
+    teaser: "Bitcoin fällt auf rund 63'000 Dollar, die US-Notenbank denkt laut über eine grosse Zinserhöhung nach. Dazu: Schadcode auf Websites von HSBC bis Ledger, die Binance-Beute wird gewaschen, und die Schweiz debattiert über den Franken-Stablecoin."
+  },
+  {
     date: "2026-11-14",
     slug: "sonderbericht-cyberangriffe-stoerungen",
     title: "Sonderbericht: Grosse Störungen und Cyberangriffe – was wirklich dahintersteckt",
